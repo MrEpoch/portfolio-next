@@ -1,3 +1,4 @@
+import { AnimatedDiv } from "@/components/shared/AnimatedElements";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
 import React from "react";
 export const projects = [
@@ -27,8 +28,9 @@ export const projects = [
 export default function Features() {
   return (
     <section className="min-h-screen w-full flex items-center gap-8 px-8 flex-col justify-between">
+      <AnimatedDiv side="top" className="flex flex-col gap-8 items-center">
       <h2 className="text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
-        Moje zkušenosti
+        Moje služby
       </h2>
       <p className="text-sm font-normal text-gray-500 lg:text-lg dark:text-gray-400">
         Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit
@@ -43,6 +45,7 @@ export default function Features() {
         Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa
         et culpa duis.
       </p>
+      </AnimatedDiv>
       <div className="w-full flex items-center gap-8 md:flex-row flex-col justify-between">
         <HoverEffect items={projects} />
       </div>

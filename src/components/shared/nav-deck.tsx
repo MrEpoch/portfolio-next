@@ -4,6 +4,7 @@ import Link from "next/link";
 import {
   CalendarIcon,
   HomeIcon,
+  LayoutList,
   MailIcon,
   PanelsTopLeft,
   PencilIcon,
@@ -70,7 +71,7 @@ const Icons = {
 const DATA = {
   navbar: [
     { href: "/", icon: HomeIcon, label: "Domov" },
-    { href: "/about", icon: User, label: "O mně" },
+    { href: "/services", icon: LayoutList, label: "Služby" },
     { href: "/projects", icon: PanelsTopLeft, label: "Projekty" },
     { href: "/blog", icon: PencilIcon, label: "Blog" },
   ],
