@@ -29,9 +29,9 @@ export default function Landing() {
   return (
     <section className="min-h-screen py-16 w-full flex items-center gap-8 px-8 flex-col justify-between">
       <AnimatedDiv side="top" className="flex flex-col gap-8 items-center">
-      <h2 className="text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+      <h1 className="text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
         Moje služby
-      </h2>
+      </h1>
       <p className="text-sm font-normal text-gray-500 lg:text-lg dark:text-gray-400">
         Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit
         enim labore culpa sint ad nisi Lorem pariatur mollit ex esse

@@ -21,7 +21,7 @@ export default function SpecificService({ data, i }: {
     <section className="min-h-screen w-full flex items-center gap-8 px-8 flex-col justify-between">
                 <AnimatedDiv side={`${i % 2 === 0 ? "left" : "right"}`} className="py-24 mx-auto w-full">
                   <div className="grid items-center grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-24">
-                    <div className={`md:${i % 2 === 0 ? "order-first" : "order-second"}`}>
+                    <div className={`md:${i % 2 === 0 ? "order-first" : "order-last"}`}>
                       <h2 className="text-4xl font-semibold tracking-tighter text-gray-900 text-balance">
     {data.heading}
                       </h2>
@@ -54,7 +54,7 @@ export default function SpecificService({ data, i }: {
                         </div>
                       </dl>
                     </div>
-                    <div className="order-first block w-full mt-12 aspect-square lg:mt-0">
+                    <div className={`${i % 2 === 0 ? "order-last" : "order-first"} block w-full mt-12 aspect-square lg:mt-0`}>
                       <div className="h-full p-2 overflow-hidden border shadow-lg bg-gray-50 rounded-3xl">
                         <Image alt={data.heading} width={1200} height={1200} className="object-fit h-full relative w-full rounded-2xl drop-shadow-2xl" src={data.mainImg} />
                       </div>
