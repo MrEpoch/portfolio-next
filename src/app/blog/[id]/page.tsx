@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 export default function Page() {
   return (
@@ -7,5 +7,5 @@ export default function Page() {
         Individual blog page
       </div>
     </div>
-  )
+  );
 }

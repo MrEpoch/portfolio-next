@@ -8,7 +8,6 @@ import {
   MailIcon,
   PanelsTopLeft,
   PencilIcon,
-  User,
 } from "lucide-react";
 
 import { cn } from "@/lib/utils";
@@ -97,6 +96,7 @@ export function NavDeck() {
                 <TooltipTrigger asChild>
                   <Link
                     href={item.href}
+                    aria-label={item.label}
                     className={cn(
                       buttonVariants({ variant: "ghost", size: "icon" }),
                       "size-12 rounded-full",
@@ -117,6 +117,7 @@ export function NavDeck() {
               <Tooltip>
                 <TooltipTrigger asChild>
                   <Link
+                    aria-label={name}
                     href={social.url}
                     className={cn(
                       buttonVariants({ variant: "ghost", size: "icon" }),

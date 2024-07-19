@@ -43,10 +43,13 @@ export default function FaqSection({ data = initialData }) {
   return (
     <section className="min-h-screen py-16 w-full flex h-full">
       <div className="max-w-screen-xl  justify-center items-center flex-1 flex md:flex-row flex-col mx-auto px-4 sm:px-6 lg:px-8 min-h-full">
-        <AnimatedDiv side="left" className="w-full p-8 flex flex-col gap-8 h-full">
-          <h1 className="text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+        <AnimatedDiv
+          side="left"
+          className="w-full p-8 flex flex-col gap-8 h-full"
+        >
+          <h2 className="text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
             {data.heading}
-          </h1>
+          </h2>
           <p className=" text-sm sm:w-3/4 font-normal text-gray-500 lg:text-lg sm:text-md dark:text-gray-400">
             {data.description}
           </p>

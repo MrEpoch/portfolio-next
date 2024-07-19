@@ -8,17 +8,17 @@ import { Input } from "@/components/ui/input";
 import CustomField from "./CustomField";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 
 export const formSchema = z.object({
   name: z
     .string()
     .min(3, { message: "Jméno musí mít alespoň 3 znaky" })
     .max(50, { message: "Jméno nesmí překročit 50 znaků" }),
-  email: z
+  email: z.string().email({ message: "Musí být pravý email" }),
+  message: z
     .string()
-    .email({ message: "Musí být pravý email" }),
-  message: z.string().min(15, { message: "Zpráva musí mít alespoň 15 znaků" }).max(400, { message: "Zpráva nesmí překročit 400 znaků" }),
+    .min(15, { message: "Zpráva musí mít alespoň 15 znaků" })
+    .max(400, { message: "Zpráva nesmí překročit 400 znaků" }),
 });
 
 export default function ContactForm() {
@@ -28,13 +28,10 @@ export default function ContactForm() {
       name: "",
       email: "",
       message: "",
-    }
+    },
   });
 
   const [submitting, setSubmitting] = useState(false);
-
-  const router = useRouter();
-
 
   async function onSubmit(data: z.infer<typeof formSchema>) {
     form.trigger();
@@ -71,7 +68,6 @@ export default function ContactForm() {
         encType="multipart/form-data"
         onSubmit={form.handleSubmit(onSubmit)}
         className="space-y-8 w-full"
-        role="action-form"
       >
         <CustomField
           control={form.control}
@@ -86,28 +82,21 @@ export default function ContactForm() {
           name="email"
           formLabel={"Email*"}
           render={({ field }) => (
-            <Input
-              value={field.value}
-              {...field}
-              type="email"
-            />
+            <Input value={field.value} {...field} type="email" />
           )}
         />
         <CustomField
           control={form.control}
           name="message"
-          formLabel={
-            "Zpráva (15-400)*"
-          }
-          render={({ field }) => (
-            <Textarea
-              value={field.value}
-              {...field}
-            />
-          )}
+          formLabel={"Zpráva (15-400)*"}
+          render={({ field }) => <Textarea value={field.value} {...field} />}
         />
 
-      <Button className="text-white hover:translate-y-1 hover:scale-[1.01] transition" disabled={submitting} type="submit">
+        <Button
+          className="text-white hover:translate-y-1 hover:scale-[1.01] transition"
+          disabled={submitting}
+          type="submit"
+        >
           Poslat zprávu
         </Button>
       </form>

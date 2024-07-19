@@ -1,7 +1,7 @@
 import React from "react";
 import { AnimatedDiv } from "@/components/shared/AnimatedElements";
-import { LinkPreview } from "@/components/ui/link-preview";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function HeroLanding() {
   return (
@@ -19,22 +19,24 @@ export default function HeroLanding() {
           Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
           cillum sint consectetur cupidatat.
         </p>
-        <LinkPreview
-          isStatic
-          url="/projects"
-          imageSrc="/assets/shots-projects.png"
+        <Link
+          href="/projects"
           className="hover:-translate-y-1 transition inline-flex w-fit justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded bg-primary hover:bg-primary-foreground focus:ring-4 focus:ring-primary dark:focus:ring-primary"
         >
           Projekty
-        </LinkPreview>
+        </Link>
       </AnimatedDiv>
       <AnimatedDiv
         side="right"
         className="w-full flex items-center justify-center h-full relative rounded px-8"
       >
         <Image
-          src="/assets/shots-projects.png"
+          src="/assets/shots-projects.webp"
           alt="Projects picture"
+          priority
+          blurDataURL="/assets/shots-projects.webp"
+          placeholder="blur"
+          loading="eager"
           width={1400}
           height={1400}
           className="h-full md:max-w-xl rounded w-full"

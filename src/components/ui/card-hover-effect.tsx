@@ -65,7 +65,7 @@ export const HoverEffect = ({
                 alt={item.title}
                 width={200}
                 height={125}
-                className="w-full h-48"
+                className="w-full object-contain h-48"
               />
               <CardDescription>{item.description}</CardDescription>
             </Card>

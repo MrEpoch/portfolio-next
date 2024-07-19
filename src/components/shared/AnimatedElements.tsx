@@ -31,13 +31,13 @@ export function AnimatedDiv({
 
   return (
     <div
+      className={className}
       ref={ref}
       style={{
         opacity: isInView ? 1 : 0,
         transform: isInView ? "none" : setSide(side),
         transition: `all ${animationLength}s cubic-bezier(0.17, 0.55, 0.55, 1)`,
       }}
-      className={className}
     >
       {children}
     </div>

@@ -1,5 +1,5 @@
-import BlogSection from '@/components/sections/Blog/BlogSection'
-import React from 'react'
+import BlogSection from "@/components/sections/Blog/BlogSection";
+import React from "react";
 
 export default function Page() {
   return (
@@ -8,5 +8,5 @@ export default function Page() {
         <BlogSection />
       </div>
     </div>
-  )
+  );
 }

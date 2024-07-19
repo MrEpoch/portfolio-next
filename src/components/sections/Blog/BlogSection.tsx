@@ -1,16 +1,16 @@
-import { AnimatedDiv } from '@/components/shared/AnimatedElements'
-import BlogCard from '@/components/shared/BlogCard'
-import { Separator } from '@/components/ui/separator'
-import React from 'react'
+import { AnimatedDiv } from "@/components/shared/AnimatedElements";
+import BlogCard from "@/components/shared/BlogCard";
+import { Separator } from "@/components/ui/separator";
+import React from "react";
 
 const blogs = [
   {
     text: "How to make a website in 5 minutes",
     link: "/blog/how-to-make-a-website-in-5-minutes",
     dataTime: "2022-01-01",
-    tags: ["webdev"]
-  }
-]
+    tags: ["webdev"],
+  },
+];
 
 export default function BlogSection() {
   return (
@@ -24,14 +24,15 @@ export default function BlogSection() {
         </h1>
       </AnimatedDiv>
       <Separator className="my-8 bg-black h-[2px]" />
-      <div className="relative z-[0] px-4 mx-auto max-w-screen-2xl flex flex-col
+      <div
+        className="relative z-[0] px-4 mx-auto max-w-screen-2xl flex flex-col
         overflow-hidden items-center justify-center justify-items-center text-center lg:py-16 sm:grid grid-cols-1 gap-x-6 gap-y-4 sm:gap-y-6
-        sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-4">
-      {blogs.map((item, i) => (
-        <BlogCard key={i} data={item} i={i} />
-      ))}
+        sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-4"
+      >
+        {blogs.map((item, i) => (
+          <BlogCard key={i} data={item} i={i} />
+        ))}
       </div>
     </section>
-  )
+  );
 }
-
