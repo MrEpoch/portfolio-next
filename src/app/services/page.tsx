@@ -1,5 +1,5 @@
 import ContactSection from "@/components/sections/Home/ContactSection";
-import Landing from "@/components/sections/Services/Landing";
+import Landing from "@/components/sections/Home/Features";
 import SpecificService from "@/components/sections/Services/SpecificService";
 import { AudioLines, Cloud } from "lucide-react";
 import React from "react";
