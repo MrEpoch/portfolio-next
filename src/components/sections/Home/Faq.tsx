@@ -42,7 +42,7 @@ Design dělám ve figmě abych ilustroval co chci převést do webových stráne
 export default function FaqSection({ data = initialData }) {
   return (
     <section className="min-h-screen py-16 w-full flex h-full">
-      <div className="max-w-screen-xl  justify-center items-center flex-1 flex md:flex-row flex-col mx-auto px-4 sm:px-6 lg:px-8 min-h-full">
+      <div className="max-w-screen-xl  justify-center items-center flex-1 flex md:flex-row flex-col mx-auto  min-h-full">
         <AnimatedDiv
           side="left"
           className="w-full p-8 flex flex-col gap-8 h-full"

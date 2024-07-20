@@ -10,14 +10,13 @@ export default function HeroLanding() {
         side="left"
         className="flex px-8 flex-col md:py-4 py-16 w-full md:items-start items-center justify-center gap-8 h-full"
       >
-        <h1 className="text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
-          Delší{" "}
-          <span className="bg-primary text-white rounded-xl px-2">text</span>{" "}
-          mého druhu
+        <h1 className="text-4xl font-extrabold tracking-tight sm:text-start text-center leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+          Začni{" "}
+          <span className="bg-primary text-white rounded-xl px-2">cestu</span>{" "}
+          se mnou
         </h1>
         <p className="text-sm font-normal text-gray-500 lg:text-md dark:text-gray-400">
-          Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
-          cillum sint consectetur cupidatat.
+          Pomohu vám nastartovat váš web s nejnovější technikou, animacemi a propracovaným designem
         </p>
         <Link
           href="/projects"

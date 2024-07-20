@@ -21,6 +21,7 @@ export default function BlogCard({
       className="w-full h-full"
       animationLength={0.3 * (i + 1)}
     >
+    <Link href={data.link}>
       <article className="hover:animate-background rounded-xl bg-gradient-to-r from-sky-300 via-blue-500 to-indigo-600 p-0.5 shadow-xl transition hover:bg-[length:400%_400%] hover:shadow-sm hover:[animation-duration:_4s]">
         <div className="rounded-[10px] bg-white p-4 !pt-20 sm:p-6">
           <time
@@ -31,11 +32,9 @@ export default function BlogCard({
             {data.dataTime}{" "}
           </time>
 
-          <Link href={data.link}>
             <h3 className="mt-0.5 text-lg font-medium text-gray-900">
               {data.text}
             </h3>
-          </Link>
 
           <div className="mt-4 flex flex-wrap gap-1">
             {data.tags.map((tag, i) => (
@@ -49,6 +48,7 @@ export default function BlogCard({
           </div>
         </div>
       </article>
+    </Link>
     </AnimatedDiv>
   );
 }
