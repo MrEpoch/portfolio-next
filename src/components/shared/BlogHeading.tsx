@@ -11,7 +11,9 @@ export default function BlogHeading({
   return (
     <header>
       <div className="">
-        <Link href="/blog" className="!text-primary !text-sm !font-bold">Blog</Link>
+        <Link href="/blog" className="!text-primary !text-sm !font-bold">
+          Blog
+        </Link>
         <h1>{BlogHeading.heading}</h1>
         <div className="py-5 text-sm font-regular text-gray-900 flex flex-wrap w-full gap-4 items-center">
           <span className="flex flex-row items-center justify-center gap-2">
@@ -32,15 +34,15 @@ export default function BlogHeading({
             <span className="">{BlogHeading.createdAt}</span>
           </span>
           <div className="flex flex-wrap items-center justify-center gap-2">
-          {BlogHeading.tags.map((tag, i) => (
-            <Link
-              key={i}
-              href={`/blog?tag=${tag}`}
-              className="flex bg-white shadow-lg !text-primary py-2 px-4 rounded-full gap-2 justify-center flex-row items-center"
-            >
-              #{tag}
-            </Link>
-          ))}
+            {BlogHeading.tags.map((tag, i) => (
+              <Link
+                key={i}
+                href={`/blog?tag=${tag}`}
+                className="flex bg-white shadow-lg !text-primary py-2 px-4 rounded-full gap-2 justify-center flex-row items-center"
+              >
+                #{tag}
+              </Link>
+            ))}
           </div>
         </div>
       </div>

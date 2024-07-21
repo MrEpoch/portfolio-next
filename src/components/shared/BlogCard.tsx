@@ -3,13 +3,7 @@ import React from "react";
 import { AnimatedDiv } from "./AnimatedElements";
 import { Post } from "@/types";
 
-export default function BlogCard({
-  data,
-  i,
-}: {
-  data: Post;
-  i: number;
-}) {
+export default function BlogCard({ data, i }: { data: Post; i: number }) {
   return (
     <AnimatedDiv
       key={i}
