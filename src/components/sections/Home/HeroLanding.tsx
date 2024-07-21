@@ -16,7 +16,8 @@ export default function HeroLanding() {
           se mnou
         </h1>
         <p className="text-sm font-normal text-gray-500 lg:text-md dark:text-gray-400">
-          Pomohu vám nastartovat váš web s nejnovější technikou, animacemi a propracovaným designem
+          Pomohu vám nastartovat váš web s nejnovější technikou, animacemi a
+          propracovaným designem
         </p>
         <Link
           href="/projects"

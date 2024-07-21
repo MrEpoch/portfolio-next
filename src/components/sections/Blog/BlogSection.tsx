@@ -1,18 +1,10 @@
 import { AnimatedDiv } from "@/components/shared/AnimatedElements";
 import BlogCard from "@/components/shared/BlogCard";
 import { Separator } from "@/components/ui/separator";
+import { Post } from "@/types";
 import React from "react";
 
-const blogs = [
-  {
-    text: "How to make a website in 5 minutes",
-    link: "/blog/how-to-make-a-website-in-5-minutes",
-    dataTime: "2022-01-01",
-    tags: ["webdev"],
-  },
-];
-
-export default function BlogSection() {
+export default function BlogSection({ posts }: { posts: Post[] }) {
   return (
     <section className="min-h-screen w-full flex items-center gap-4 px-8 flex-col">
       <AnimatedDiv
@@ -29,7 +21,7 @@ export default function BlogSection() {
         overflow-hidden items-center justify-center justify-items-center text-center lg:py-16 sm:grid grid-cols-1 gap-x-6 gap-y-4 sm:gap-y-6
         sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-4"
       >
-        {blogs.map((item, i) => (
+        {posts.map((item, i) => (
           <BlogCard key={i} data={item} i={i} />
         ))}
       </div>
