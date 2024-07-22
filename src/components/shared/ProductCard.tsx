@@ -4,13 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Project } from "@/types";
 
-export default function ProductCard({
-  data,
-  i,
-}: {
-  data: Project
-  i: number;
-}) {
+export default function ProductCard({ data, i }: { data: Project; i: number }) {
   return (
     <AnimatedDiv
       key={i}
@@ -25,7 +19,7 @@ export default function ProductCard({
         <Link
           className="w-full h-full
           "
-    href={`/projects/${data.slug}`}
+          href={`/projects/${data.slug}`}
         >
           <div
             className={`w-full h-48 overflow-hidden bg-gray-200 dark:bg-gray-800`}

@@ -4,11 +4,13 @@ import colors from "tailwindcss/colors";
 
 const config = {
   darkMode: ["class"],
-    safelist: [
-    ...["100", "200", "300", "400", "500", "600", "700", "800", "900"].map((number) => `bg-blue-${number}`),
-      "bg-primary-foreground",
-      "bg-primary",
-      "text-primary"
+  safelist: [
+    ...["100", "200", "300", "400", "500", "600", "700", "800", "900"].map(
+      (number) => `bg-blue-${number}`,
+    ),
+    "bg-primary-foreground",
+    "bg-primary",
+    "text-primary",
   ],
 
   content: [
@@ -99,9 +101,9 @@ const config = {
 function addVariablesForColors({ addBase, theme }: any) {
   let allColors = flattenColorPalette(theme("colors"));
   let newVars = Object.fromEntries(
-    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val]),
   );
- 
+
   addBase({
     ":root": newVars,
   });

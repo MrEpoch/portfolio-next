@@ -5,7 +5,6 @@ import { Project } from "@/types";
 import Link from "next/link";
 import React from "react";
 
-
 export default function ProductSection({ projects }: { projects: Project[] }) {
   return (
     <section className="min-h-screen w-full flex gap-8 items-center flex-col px-8">

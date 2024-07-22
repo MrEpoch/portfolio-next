@@ -7,21 +7,21 @@ export const projects = [
     description:
       "Mam zkušenosti s vytvářením profesionálních animací pro webové stránky.",
     imgSrc: "/assets/undraw-animation.svg",
-    link: "/contact",
+    link: "/services#animace",
   },
   {
     title: "Design",
     description:
       "Výtvor kvalitních designu ve figmě, od minimalistických až do klasických stylů webových stránek.",
     imgSrc: "/assets/undraw-design.svg",
-    link: "/contact",
+    link: "/services#design",
   },
   {
     title: "Vývoj",
     description:
       "Většina mých webových projektů jsou psána kódově od čistého html + css až po komplexní NextJS ( + React knihovnu) framework.",
     imgSrc: "/assets/undraw-code.svg",
-    link: "/contact",
+    link: "/services#vývoj",
   },
 ];
 

@@ -89,7 +89,7 @@ export function NavDeck() {
   return (
     <div className="flex z-[999] h-fit w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-transparent fixed top-4 right-0">
       <TooltipProvider>
-        <Dock direction="middle" className="">
+        <Dock direction="middle" className="bg-white">
           {DATA.navbar.map((item) => (
             <DockIcon key={item.label}>
               <Tooltip>

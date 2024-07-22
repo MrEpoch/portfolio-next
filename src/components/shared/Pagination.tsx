@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 export function Pagination({
   baseUrl,
@@ -17,7 +17,7 @@ export function Pagination({
         <>
           <Link href={`${baseUrl}/${page - 1}`} rel="prev">
             Previous
-          </Link>{' '}
+          </Link>{" "}
         </>
       )}
       {perPage * page < total && (

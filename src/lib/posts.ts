@@ -10,9 +10,7 @@ export async function getPosts(): Promise<Post[]> {
   // Retrieve metadata from MDX files
   const posts = await Promise.all(
     slugs.map(async ({ name }) => {
-      const { metadata } = await import(
-        `../app/blog/(posts)/${name}/page.mdx`
-      );
+      const { metadata } = await import(`../app/blog/(posts)/${name}/page.mdx`);
       return { slug: name, ...metadata };
     }),
   );
@@ -32,7 +30,7 @@ export async function getPostsByCategory({
 
   // Filter posts by specified category
   const posts = allPosts.filter(
-    (post) => post.categories.indexOf(category) !== -1
+    (post) => post.categories.indexOf(category) !== -1,
   );
 
   return posts;

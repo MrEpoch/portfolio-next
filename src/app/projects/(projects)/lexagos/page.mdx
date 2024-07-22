@@ -6,7 +6,8 @@ import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
 export const metadata = {
   title: "Project lexagos",
   publishDate: "2024-07-21T00:00:00Z",
-  description: "Lexagos, course platform project made in nextjs with prisma, three.js, clerk, and tailwindcss with shadcn",
+  description:
+    "Lexagos, course platform project made in nextjs with prisma, three.js, clerk, and tailwindcss with shadcn",
   technologies: ["prisma", "nextjs", "tailwindcss"],
   imgSrc: "/assets/project1.webp",
   projectUrl: "https://lexagos.vercel.app/",
@@ -14,6 +15,7 @@ export const metadata = {
 };
 
 # Projekt Lexagos
+
 <Image src="/assets/project1.webp" alt="project1" width={2000} height={2000} />
 
 export const content = [
@@ -65,13 +67,16 @@ export const content = [
   },
 ];
 
-<ProjectInfo info={{
-  title: "Lexagos",
-  description: "Lexagos, course platform project made in nextjs with prisma, three.js, clerk, and tailwindcss with shadcn",
-  technologies: ["prisma", "nextjs", "tailwindcss"],
-  imgSrc: "/assets/project1.webp",
-  projectUrl: "https://lexagos.vercel.app/",
-  githubUrl: "https://github.com/mrepoch/lexagos",
-}} />
+<ProjectInfo
+  info={{
+    title: "Lexagos",
+    description:
+      "Lexagos, course platform project made in nextjs with prisma, three.js, clerk, and tailwindcss with shadcn",
+    technologies: ["prisma", "nextjs", "tailwindcss"],
+    imgSrc: "/assets/project1.webp",
+    projectUrl: "https://lexagos.vercel.app/",
+    githubUrl: "https://github.com/mrepoch/lexagos",
+  }}
+/>
 
 <StickyScroll content={content} />

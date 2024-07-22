@@ -4,7 +4,6 @@ import { Separator } from "@/components/ui/separator";
 import { Project } from "@/types";
 import React from "react";
 
-
 export default function ProductSection({ projects }: { projects: Project[] }) {
   return (
     <section className="min-h-screen w-full flex gap-8 flex-col px-8">

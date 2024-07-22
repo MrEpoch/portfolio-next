@@ -57,7 +57,7 @@
     --chart-4: ;
     --chart-5: ;
   }
-  
+
   .blog h1 {
     @apply text-3xl sm:text-4xl font-bold mt-8 mb-4 text-gray-800;
   }
@@ -89,7 +89,7 @@
 
   /* Styling for images */
   .blog img {
-    @apply w-full h-auto my-4 rounded-lg shadow-md;
+    @apply w-full h-auto my-4 rounded shadow-md;
   }
 
   /* Customizing spacing for .blog elements */
