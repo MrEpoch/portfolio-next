@@ -1,37 +1,11 @@
 import { AnimatedDiv } from "@/components/shared/AnimatedElements";
 import ProductCard from "@/components/shared/ProductCard";
 import { Separator } from "@/components/ui/separator";
+import { Project } from "@/types";
 import React from "react";
 
-const projects = [
-  {
-    imgSrc: "/assets/project1.webp",
-    link: "/",
-    title: "Lexagos",
-  },
-  {
-    imgSrc: "/assets/project2.webp",
-    link: "/",
-    title: "Lyfier",
-  },
-  {
-    imgSrc: "/assets/project3.webp",
-    link: "/",
-    title: "Lexagos1",
-  },
-  {
-    imgSrc: "/assets/project0.webp",
-    link: "/",
-    title: "Lyfier3",
-  },
-  {
-    imgSrc: "/assets/project4.webp",
-    link: "/",
-    title: "Lexagos2",
-  },
-];
 
-export default function ProductSection() {
+export default function ProductSection({ projects }: { projects: Project[] }) {
   return (
     <section className="min-h-screen w-full flex gap-8 flex-col px-8">
       <AnimatedDiv

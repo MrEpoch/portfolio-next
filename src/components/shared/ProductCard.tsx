@@ -2,16 +2,13 @@ import React from "react";
 import { AnimatedDiv } from "./AnimatedElements";
 import Link from "next/link";
 import Image from "next/image";
+import { Project } from "@/types";
 
 export default function ProductCard({
   data,
   i,
 }: {
-  data: {
-    imgSrc: string;
-    title: string;
-    link: string;
-  };
+  data: Project
   i: number;
 }) {
   return (
@@ -28,7 +25,7 @@ export default function ProductCard({
         <Link
           className="w-full h-full
           "
-          href={data.link}
+    href={`/projects/${data.slug}`}
         >
           <div
             className={`w-full h-48 overflow-hidden bg-gray-200 dark:bg-gray-800`}
