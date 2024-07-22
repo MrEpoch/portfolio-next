@@ -20,7 +20,7 @@ export default function SpecificService({
   i: number;
 }) {
   return (
-    <section className="min-h-screen w-full flex items-center gap-8 px-8 flex-col justify-between">
+    <section id={data.heading.toLowerCase()} className="min-h-screen w-full flex items-center gap-8 px-8 flex-col justify-between">
       <AnimatedDiv
         side={`${i % 2 === 0 ? "left" : "right"}`}
         className="py-24 mx-auto w-full"

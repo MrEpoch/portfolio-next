@@ -41,7 +41,7 @@ Design dělám ve figmě abych ilustroval co chci převést do webových stráne
 
 export default function FaqSection({ data = initialData }) {
   return (
-    <section className="min-h-screen py-16 w-full flex h-full">
+    <section className="min-h-screen py-16 w-full flex h-full" id="faq">
       <div className="max-w-screen-xl  justify-center items-center flex-1 flex md:flex-row flex-col mx-auto  min-h-full">
         <AnimatedDiv
           side="left"

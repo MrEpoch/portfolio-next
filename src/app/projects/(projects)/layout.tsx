@@ -1,4 +1,3 @@
-import "./project.css";
 
 export default function RootLayout({
   children,

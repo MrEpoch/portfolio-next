@@ -57,6 +57,85 @@
     --chart-4: ;
     --chart-5: ;
   }
+  
+  .blog h1 {
+    @apply text-3xl sm:text-4xl font-bold mt-8 mb-4 text-gray-800;
+  }
+
+  .blog h2 {
+    @apply text-2xl sm:text-3xl font-semibold mt-6 mb-3 text-gray-800;
+  }
+
+  .blog h3 {
+    @apply text-xl sm:text-2xl font-semibold mt-5 mb-2 text-gray-800;
+  }
+
+  .blog h4 {
+    @apply text-lg sm:text-xl font-medium mt-4 mb-2 text-gray-800;
+  }
+
+  .blog h5 {
+    @apply text-base sm:text-lg font-medium mt-3 mb-1 text-gray-800;
+  }
+
+  .blog h6 {
+    @apply text-sm sm:text-base font-medium mt-2 mb-1 text-gray-800;
+  }
+
+  /* Customizing typography for paragraphs */
+  .blog p {
+    @apply text-base leading-relaxed mb-4 text-gray-700;
+  }
+
+  /* Styling for images */
+  .blog img {
+    @apply w-full h-auto my-4 rounded-lg shadow-md;
+  }
+
+  /* Customizing spacing for .blog elements */
+  .blog .container {
+    @apply mx-auto px-4 md:px-8 lg:px-16;
+  }
+
+  .blog .article-content {
+    @apply mt-8 mb-16;
+  }
+
+  /* Custom styles for blockquotes */
+  .blog blockquote {
+    @apply border-l-4 border-gray-300 pl-4 italic text-gray-600 my-4;
+  }
+
+  /* Custom styles for code blocks */
+  .blog pre {
+    @apply bg-gray-100 rounded p-4 overflow-x-auto my-4;
+  }
+
+  .blog code {
+    @apply bg-gray-100 text-red-600 px-1 rounded;
+  }
+
+  /* Custom styles for lists */
+  .blog ul {
+    @apply list-disc pl-5 my-4;
+  }
+
+  .blog ol {
+    @apply list-decimal pl-5 my-4;
+  }
+
+  .blog li {
+    @apply mb-2;
+  }
+
+  /* Custom styles for links */
+  .blog a {
+    @apply text-blue-600 hover:underline;
+  }
+}
+
+body {
+  scroll-behavior: smooth;
 }
 
 /* HTML: <div class="loader"></div> */
