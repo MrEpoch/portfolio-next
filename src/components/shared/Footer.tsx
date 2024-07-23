@@ -1,3 +1,4 @@
+import { Separator } from "@radix-ui/react-separator";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -42,7 +43,7 @@ export default function Footer() {
             <ul className="mt-8 space-y-4 text-sm">
               <li>
                 <Link
-                  className="text-gray-700 transition hover:text-gray-700/75"
+                  className="relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-blue-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left text-gray-700 transition"
                   href="/projects/lexagos"
                 >
                   Lexagos
@@ -51,7 +52,7 @@ export default function Footer() {
 
               <li>
                 <Link
-                  className="text-gray-700 transition hover:text-gray-700/75"
+                  className="relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-blue-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left text-gray-700 transition"
                   href="/projects/lyfier"
                 >
                   Lyfier
@@ -64,9 +65,9 @@ export default function Footer() {
             <p className="text-lg font-medium text-gray-900">Služby</p>
 
             <ul className="mt-8 space-y-4 text-sm">
-              <li>
+              <li className="group">
                 <Link
-                  className="text-gray-700 transition hover:text-gray-700/75"
+                  className="relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-blue-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left text-gray-700 transition"
                   href="/services#animace"
                 >
                   Webové Animace
@@ -75,7 +76,7 @@ export default function Footer() {
 
               <li>
                 <Link
-                  className="text-gray-700 transition hover:text-gray-700/75"
+                  className="relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-blue-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left text-gray-700 transition"
                   href="/services#design"
                 >
                   {" "}
@@ -85,11 +86,11 @@ export default function Footer() {
 
               <li>
                 <Link
-                  className="text-gray-700 transition hover:text-gray-700/75"
+                  className="relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-blue-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left text-gray-700 transition"
                   href="/services#vývoj"
                 >
                   {" "}
-                  Webový vývoj{" "}
+                  Webový Vývoj{" "}
                 </Link>
               </li>
             </ul>
@@ -101,7 +102,7 @@ export default function Footer() {
             <ul className="mt-8 space-y-4 text-sm">
               <li>
                 <Link
-                  className="text-gray-700 transition hover:text-gray-700/75"
+                  className="relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-blue-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left text-gray-700 transition"
                   href="/blog/uvod"
                 >
                   {" "}
@@ -117,7 +118,7 @@ export default function Footer() {
             <ul className="mt-8 space-y-4 text-sm">
               <li>
                 <Link
-                  className="text-gray-700 transition hover:text-gray-700/75"
+                  className="relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-blue-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left text-gray-700 transition"
                   href="/#faq"
                 >
                   {" "}
@@ -127,11 +128,11 @@ export default function Footer() {
 
               <li>
                 <Link
-                  className="text-gray-700 transition hover:text-gray-700/75"
+                  className="relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-blue-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left text-gray-700 transition"
                   href="/contact"
                 >
                   {" "}
-                  Contact{" "}
+                  Kontakt{" "}
                 </Link>
               </li>
             </ul>

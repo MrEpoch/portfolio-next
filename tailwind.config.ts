@@ -86,12 +86,17 @@ const config = {
           "0%, 100%": { backgroundPosition: "0% 50%" },
           "50%": { backgroundPosition: "100% 50%" },
         },
+        animateWidth: {
+          "0%": { width: "0%" },
+          "100%": { width: "100%" },
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         loading: "loading 3s linear infinite",
         border: "background ease infinite",
+        width: "animateWidth 0.5s ease-out"
       },
     },
   },

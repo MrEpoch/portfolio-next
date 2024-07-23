@@ -15,7 +15,7 @@ export default function HeroLanding() {
           <span className="bg-primary text-white rounded-xl px-2">cestu</span>{" "}
           se mnou
         </h1>
-        <p className="text-sm font-normal text-gray-500 lg:text-md dark:text-gray-400">
+        <p className="text-sm font-normal text-gray-500 lg:text-lg dark:text-gray-400">
           Pomohu vám nastartovat váš web s nejnovější technikou, animacemi a
           propracovaným designem
         </p>

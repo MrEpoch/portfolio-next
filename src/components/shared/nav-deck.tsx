@@ -3,6 +3,7 @@ import React from "react";
 import Link from "next/link";
 import {
   CalendarIcon,
+  Contact,
   HomeIcon,
   LayoutList,
   MailIcon,
@@ -76,10 +77,10 @@ const DATA = {
   ],
   contact: {
     social: {
-      GitHub: {
-        name: "GitHub",
-        url: "https://github.com/mrepoch",
-        icon: Icons.github,
+      Contact: {
+        name: "Kontakt",
+        url: "/contact",
+        icon: Contact,
       },
     },
   },
