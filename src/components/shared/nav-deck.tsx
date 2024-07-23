@@ -77,7 +77,7 @@ const DATA = {
   ],
   contact: {
     social: {
-      Contact: {
+      Kontakt: {
         name: "Kontakt",
         url: "/contact",
         icon: Contact,
