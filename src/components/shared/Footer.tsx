@@ -1,4 +1,3 @@
-import { Separator } from "@radix-ui/react-separator";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -215,7 +214,7 @@ export default function Footer() {
             </div>
 
             <p className="mt-4 text-center text-sm text-gray-500 sm:mt-0 sm:text-right">
-              Copyright &copy; 2024. All rights reserved.
+              Copyright &copy; 2024 Alexandr Stenčuk. All rights reserved.
             </p>
           </div>
         </div>

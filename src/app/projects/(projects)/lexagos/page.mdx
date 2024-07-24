@@ -8,7 +8,7 @@ export const metadata = {
   publishDate: "2024-07-21T00:00:00Z",
   description:
     "Lexagos, kurzová platforma vytvořena v nextjs a prisma, three.js, clerk, a tailwindcss s shadcn",
-  technologies: ["prisma", "nextjs", "tailwindcss"],
+  technologies: ["prisma", "nextjs", "tailwindcss", "Clerk Auth", "Shadcn"],
   imgSrc: "/assets/project1.webp",
   projectUrl: "https://lexagos.vercel.app/",
   githubUrl: "https://github.com/mrepoch/lexagos",
@@ -23,10 +23,41 @@ export const metadata = {
     title: "Lexagos",
     description:
       "Lexagos, kurzová platforma vytvořena v nextjs a prisma, three.js, clerk, a tailwindcss s shadcn",
-    technologies: ["prisma", "nextjs", "tailwindcss"],
+    technologies: ["prisma", "nextjs", "tailwindcss", "Clerk Auth", "Shadcn"],
     publishDate: "2024",
     imgSrc: "/assets/project1.webp",
     projectUrl: "https://lexagos.vercel.app/",
     githubUrl: "https://github.com/mrepoch/lexagos",
   }}
 />
+
+## Popis projektu
+
+Projekt jsem stavěl v roce 2024, cíl bylo postavit platformu kde budou vystaveny kurzy, ke kurzům se lze přidat a i vytvořit, updatovat, a smazat.
+
+Přihlašování bylo zaručené s Clerk auth a databáze byla postgres s Prismou jako ORM. Backend byl v praxi jenom NextJS. Všechny akce jako přidání kurzu nebo
+update byli Server Akce přes Formy.
+
+Barevné schéma byla černá barva jako pozadí s červenou barvou, něco jako Netflix ale jináč používaná barva. Na první stránce
+byl 3D objekt země koule který lze manipulovat.
+
+Stránka má cookie oznáméní o tom aby bylo moužít použít mapy.
+
+Navigace byla přes sidebar, nahoře je navigační menu na které lze kliknout.
+
+Díky tomu že to má Clerk Auth tak uživatelé mohou použít Google nebo Github k přihlášení.
+
+Používá tailwindcss komponenty od Shadcn UI.
+
+Stránka byla psána v angličtině a dole lze změnit na češtinu.
+
+### Obsah webu:
+
+    #### Domovská stránka (home page)
+    #### O nás stránka (about page)
+    #### Kontaktní stránka (contact page)
+    #### Kurzy stránka (Courses page)
+    #### Kurzy stránka > Jednotlivý kurz (Courses page > individual course)
+    #### Sign In stránka
+    #### Sign up stránka
+    #### Uživatelská stránka (account page) - ukáže se jenom přihlášeným uživatelům

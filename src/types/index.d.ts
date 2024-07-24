@@ -22,3 +22,11 @@ export interface Project {
   technologies: string[];
   imgSrc: string;
 }
+
+export interface ContactInfo {
+  contactType: string;
+  contactIsLink: boolean;
+  contactLink?: string;
+  contactData?: string;
+  Svg: any;
+}
