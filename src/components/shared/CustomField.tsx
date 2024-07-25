@@ -3,6 +3,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
+  FormDescription
 } from "@/components/ui/form";
 import React from "react";
 import { Control } from "react-hook-form";
@@ -15,6 +16,7 @@ type customFieldType = {
   render: (props: { field: any }) => React.ReactNode;
   className?: string;
   formLabel?: string;
+  formDescription?: string;
 };
 
 export default function CustomField({
@@ -22,6 +24,7 @@ export default function CustomField({
   render,
   name,
   formLabel,
+  formDescription,
   className = "",
 }: customFieldType) {
   return (
@@ -31,6 +34,7 @@ export default function CustomField({
       render={({ field }) => (
         <FormItem className={className}>
           {formLabel && <FormLabel>{formLabel}</FormLabel>}
+          {formDescription && <FormDescription>{formDescription}</FormDescription>}
           <FormControl>{render({ field })}</FormControl>
         </FormItem>
       )}

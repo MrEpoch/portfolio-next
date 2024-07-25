@@ -32,7 +32,7 @@ export default function ProjectInfo({ info }: { info: Project }) {
           <Github className="w-5 h-5 text-black" />
         </Link>
         <Link
-          href={info.githubUrl}
+          href={info.projectUrl}
           className="bg-gray-100 p-3 hover:bg-gray-200 transition flex items-center justify-center w-fit rounded-full"
         >
           <Globe className="w-5 h-5 text-black" />

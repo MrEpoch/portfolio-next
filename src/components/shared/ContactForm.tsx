@@ -72,6 +72,7 @@ export default function ContactForm() {
         <CustomField
           control={form.control}
           name="name"
+          formDescription={"Jméno bude zobrazeni ve zprávě."}
           formLabel={"Jméno (3-50)*"}
           render={({ field }) => (
             <Input type="text" value={field.value} {...field} />
@@ -79,6 +80,7 @@ export default function ContactForm() {
         />
         <CustomField
           control={form.control}
+    formDescription={"Email na který přijde odpověď."}
           name="email"
           formLabel={"Email*"}
           render={({ field }) => (
@@ -87,6 +89,7 @@ export default function ContactForm() {
         />
         <CustomField
           control={form.control}
+          formDescription={"Obsah zprávy, text."}
           name="message"
           formLabel={"Zpráva (15-400)*"}
           render={({ field }) => <Textarea value={field.value} {...field} />}

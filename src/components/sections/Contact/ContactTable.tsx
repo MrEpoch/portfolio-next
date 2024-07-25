@@ -29,11 +29,10 @@ export default function ContactsTable() {
   };
 
   return (
-    <Table role="contact-table">
-      <TableHeader role="contact-table-header">
+    <Table>
+      <TableHeader>
         <TableRow
           className="hover:bg-transparent"
-          role="contact-table-row-header"
         >
           <TableHead className="">Druh kontaktu</TableHead>
           <TableHead>Text</TableHead>
@@ -41,7 +40,7 @@ export default function ContactsTable() {
         </TableRow>
       </TableHeader>
       <TableBody>
-        <TableRow className="hover:bg-transparent" role="contact-table-row-1">
+        <TableRow className="hover:bg-transparent">
           <TableCell className="font-medium">Email</TableCell>
           <TableCell>stencuk@proton.me</TableCell>
           <TableCell className="text-right">
@@ -50,11 +49,11 @@ export default function ContactsTable() {
               onClick={() => copyToClipboard("stencuk@proton.me")}
               variant="secondary"
             >
-              <Clipboard role="image-item" />
+              <Clipboard />
             </Button>
           </TableCell>
         </TableRow>
-        <TableRow className="hover:bg-transparent" role="contact-table-row-3">
+        <TableRow className="hover:bg-transparent">
           <TableCell className="font-medium">Instagram</TableCell>
           <TableCell>@projekt</TableCell>
           <TableCell className="text-right">
@@ -72,7 +71,7 @@ export default function ContactsTable() {
             </Button>
           </TableCell>
         </TableRow>
-        <TableRow className="hover:bg-transparent" role="contact-table-row-3">
+        <TableRow className="hover:bg-transparent" >
           <TableCell className="font-medium">Github</TableCell>
           <TableCell>MrEpoch</TableCell>
           <TableCell className="text-right">

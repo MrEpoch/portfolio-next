@@ -38,9 +38,9 @@ const Dock = React.forwardRef<HTMLDivElement, DockProps>(
     const renderChildren = () => {
       return React.Children.map(children, (child: any) => {
         return React.cloneElement(child, {
-          mousex: mouseX,
-          magnification: magnification,
-          distance: distance,
+          "data-mousex": mouseX,
+          "data-magnification": magnification,
+          "data-distance": distance,
         });
       });
     };
@@ -67,9 +67,9 @@ Dock.displayName = "Dock";
 
 export interface DockIconProps {
   size?: number;
-  magnification?: number;
-  distance?: number;
-  mousex?: any;
+  "data-magnification"?: number;
+  "data-distance"?: number;
+  "data-mousex"?: any;
   className?: string;
   children?: React.ReactNode;
   props?: PropsWithChildren;
@@ -77,9 +77,9 @@ export interface DockIconProps {
 
 const DockIcon = ({
   size,
-  magnification = DEFAULT_MAGNIFICATION,
-  distance = DEFAULT_DISTANCE,
-  mousex,
+  "data-magnification": magnification = DEFAULT_MAGNIFICATION,
+  "data-distance": distance = DEFAULT_DISTANCE,
+  "data-mousex": mousex,
   className,
   children,
   ...props
