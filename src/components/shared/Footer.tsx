@@ -36,13 +36,13 @@ export default function Footer() {
         </div>
 
         <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          <div className="text-center sm:text-left">
+          <div className="text-center sm:text-left w-full">
             <p className="text-lg font-medium text-gray-900">Projekty</p>
 
-            <ul className="mt-8 space-y-4 text-sm">
+            <ul className="mt-8 space-y-4 w-full text-sm">
               <li>
                 <Link
-                  className="relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-blue-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left text-gray-700 transition"
+                  className="relative w-fit max-[400px]:w-full block after:block after:content-[''] after:absolute after:h-[3px] after:bg-blue-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left text-gray-700 transition"
                   href="/projects/lexagos"
                 >
                   Lexagos
@@ -51,7 +51,7 @@ export default function Footer() {
 
               <li>
                 <Link
-                  className="relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-blue-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left text-gray-700 transition"
+                  className="relative w-fit max-[400px]:w-full block after:block after:content-[''] after:absolute after:h-[3px] after:bg-blue-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left text-gray-700 transition"
                   href="/projects/lyfier"
                 >
                   Lyfier
@@ -60,13 +60,13 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="text-center sm:text-left">
+          <div className="text-center sm:text-left w-full">
             <p className="text-lg font-medium text-gray-900">Služby</p>
 
-            <ul className="mt-8 space-y-4 text-sm">
+            <ul className="mt-8 space-y-4 text-sm w-full">
               <li className="group">
                 <Link
-                  className="relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-blue-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left text-gray-700 transition"
+                  className="relative w-fit max-[400px]:w-full block after:block after:content-[''] after:absolute after:h-[3px] after:bg-blue-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left text-gray-700 transition"
                   href="/services#animace"
                 >
                   Webové Animace
@@ -75,7 +75,7 @@ export default function Footer() {
 
               <li>
                 <Link
-                  className="relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-blue-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left text-gray-700 transition"
+                  className="relative w-fit max-[400px]:w-full block after:block after:content-[''] after:absolute after:h-[3px] after:bg-blue-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left text-gray-700 transition"
                   href="/services#design"
                 >
                   {" "}
@@ -85,7 +85,7 @@ export default function Footer() {
 
               <li>
                 <Link
-                  className="relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-blue-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left text-gray-700 transition"
+                  className="relative w-fit max-[400px]:w-full block after:block after:content-[''] after:absolute after:h-[3px] after:bg-blue-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left text-gray-700 transition"
                   href="/services#vývoj"
                 >
                   {" "}
@@ -95,13 +95,13 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="text-center sm:text-left">
+          <div className="text-center sm:text-left w-full">
             <p className="text-lg font-medium text-gray-900">Blog</p>
 
-            <ul className="mt-8 space-y-4 text-sm">
+            <ul className="mt-8 space-y-4 text-sm w-full">
               <li>
                 <Link
-                  className="relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-blue-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left text-gray-700 transition"
+                  className="relative w-fit max-[400px]:w-full block after:block after:content-[''] after:absolute after:h-[3px] after:bg-blue-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left text-gray-700 transition"
                   href="/blog/uvod"
                 >
                   {" "}
@@ -111,13 +111,13 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="text-center sm:text-left">
+          <div className="text-center sm:text-left w-full">
             <p className="text-lg font-medium text-gray-900">Informace</p>
 
-            <ul className="mt-8 space-y-4 text-sm">
+            <ul className="mt-8 space-y-4 text-sm w-full">
               <li>
                 <Link
-                  className="relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-blue-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left text-gray-700 transition"
+                  className="relative w-fit max-[400px]:w-full block after:block after:content-[''] after:absolute after:h-[3px] after:bg-blue-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left text-gray-700 transition"
                   href="/#faq"
                 >
                   {" "}
@@ -127,7 +127,7 @@ export default function Footer() {
 
               <li>
                 <Link
-                  className="relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-blue-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left text-gray-700 transition"
+                  className="relative w-fit max-[400px]:w-full block after:block after:content-[''] after:absolute after:h-[3px] after:bg-blue-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left text-gray-700 transition"
                   href="/contact"
                 >
                   {" "}
