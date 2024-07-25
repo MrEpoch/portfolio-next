@@ -26,10 +26,6 @@ export default function HeroLanding() {
           Projekty
         </Link>
       </AnimatedDiv>
-      <AnimatedDiv
-        side="right"
-        className="w-full flex items-center justify-center h-full relative rounded px-8"
-      >
         <Image
           src="/assets/shots-projects.webp"
           alt="Projects picture"
@@ -39,11 +35,8 @@ export default function HeroLanding() {
           loading="eager"
           width={900}
           height={900}
-          sizes="(max-width: 768px) ,"
           className="h-full md:max-w-xl rounded w-full"
         />
-      </AnimatedDiv>
-      &nbsp;
     </section>
   );
 }

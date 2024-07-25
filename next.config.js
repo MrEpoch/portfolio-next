@@ -15,7 +15,7 @@ const nextConfig = {
           {
             key: "Content-Security-Policy",
             value:
-              "default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' web3forms.com js.hcaptcha.com 'unsafe-inline' 'unsafe-eval'; connect-src 'self' api.web3forms.com newassets.hcaptcha.com; frame-src 'self' newassets.hcaptcha.com",
+            "default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' web3forms.com js.hcaptcha.com 'unsafe-inline' 'unsafe-eval'; connect-src 'self' api.web3forms.com newassets.hcaptcha.com; frame-src 'self' newassets.hcaptcha.com; img-src 'self' www.w3.org",
           },
           {
             key: "Strict-Transport-Security",

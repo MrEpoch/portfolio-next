@@ -17,7 +17,7 @@ export default async function Page({
 
   return (
     <div className="relative w-full min-h-screen py-16">
-      <div className="max-w-screen-xl flex-col gap-8 justify-between items-center flex mx-auto sm:px-6 lg:px-8 min-h-full">
+      <div className="max-w-screen-xl overflow-x-hidden flex-col gap-8 justify-between items-center flex mx-auto sm:px-6 lg:px-8 min-h-full">
         <BlogSection posts={posts} />
       </div>
     </div>
