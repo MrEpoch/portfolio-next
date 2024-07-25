@@ -1,6 +1,7 @@
 import ContactsTable from "@/components/sections/Contact/ContactTable";
 import ContactSection from "@/components/sections/Home/ContactSection";
 import FaqSection from "@/components/sections/Home/Faq";
+import { Metadata } from "next";
 import React from "react";
 
 export const metadata: Metadata = {
