@@ -1,66 +1,66 @@
-import { MetadataRoute } from 'next'
- 
+import { MetadataRoute } from "next";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: 'https://portfolio.stencukpage.com',
+      url: "https://portfolio.stencukpage.com",
       lastModified: new Date(),
-      changeFrequency: 'yearly',
+      changeFrequency: "yearly",
       priority: 1,
     },
     {
-      url: 'https://portfolio.stencukpage.com/services',
+      url: "https://portfolio.stencukpage.com/services",
       lastModified: new Date(),
-      changeFrequency: 'yearly',
+      changeFrequency: "yearly",
       priority: 0.8,
     },
     {
-      url: 'https://portfolio.stencukpage.com/blog',
+      url: "https://portfolio.stencukpage.com/blog",
       lastModified: new Date(),
-      changeFrequency: 'weekly',
+      changeFrequency: "weekly",
       priority: 0.5,
     },
     {
-      url: 'https://portfolio.stencukpage.com/projects',
+      url: "https://portfolio.stencukpage.com/projects",
       lastModified: new Date(),
-      changeFrequency: 'monthly',
+      changeFrequency: "monthly",
       priority: 0.5,
     },
     {
-      url: 'https://portfolio.stencukpage.com/contact',
+      url: "https://portfolio.stencukpage.com/contact",
       lastModified: new Date(),
-      changeFrequency: 'yearly',
+      changeFrequency: "yearly",
       priority: 0.5,
     },
     {
-      url: 'https://portfolio.stencukpage.com/projects/lexagos',
+      url: "https://portfolio.stencukpage.com/projects/lexagos",
       lastModified: new Date(),
-      changeFrequency: 'yearly',
+      changeFrequency: "yearly",
       priority: 0.5,
     },
     {
-      url: 'https://portfolio.stencukpage.com/projects/lyfier',
+      url: "https://portfolio.stencukpage.com/projects/lyfier",
       lastModified: new Date(),
-      changeFrequency: 'yearly',
+      changeFrequency: "yearly",
       priority: 0.5,
     },
     {
-      url: 'https://portfolio.stencukpage.com/blog?tag=nextjs',
+      url: "https://portfolio.stencukpage.com/blog?tag=nextjs",
       lastModified: new Date(),
-      changeFrequency: 'monthly',
+      changeFrequency: "monthly",
       priority: 0.5,
     },
     {
-      url: 'https://portfolio.stencukpage.com/blog/uvod',
+      url: "https://portfolio.stencukpage.com/blog/uvod",
       lastModified: new Date(),
-      changeFrequency: 'never',
+      changeFrequency: "never",
       priority: 0.5,
     },
     {
-      url: 'https://portfolio.stencukpage.com/blog/nextjs',
+      url: "https://portfolio.stencukpage.com/blog/nextjs",
       lastModified: new Date(),
-      changeFrequency: 'never',
+      changeFrequency: "never",
       priority: 0.5,
-    }
-  ]
+    },
+  ];
 }

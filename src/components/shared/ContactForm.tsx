@@ -7,7 +7,9 @@ import { Form } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import CustomField from "./CustomField";
 import { Textarea } from "@/components/ui/textarea";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import HCaptcha from "@hcaptcha/react-hcaptcha";
+import { useToast } from "../ui/use-toast";
 
 export const formSchema = z.object({
   name: z
@@ -19,6 +21,7 @@ export const formSchema = z.object({
     .string()
     .min(15, { message: "Zpráva musí mít alespoň 15 znaků" })
     .max(400, { message: "Zpráva nesmí překročit 400 znaků" }),
+  "h-captcha-response": z.string(),
 });
 
 export default function ContactForm() {
@@ -33,7 +36,22 @@ export default function ContactForm() {
 
   const [submitting, setSubmitting] = useState(false);
 
+  const { toast } = useToast();
+
+  const onHCaptchaChange = (token: string) => {
+    form.setValue("h-captcha-response", token);
+  };
+
   async function onSubmit(data: z.infer<typeof formSchema>) {
+    if (
+      !(data["h-captcha-response"] && data["h-captcha-response"]?.length > 0)
+    ) {
+      toast({
+        description: "Zkontrolujte, prosím, zda jste vyplnili captcha.",
+      });
+      return;
+    }
+
     form.trigger();
     setSubmitting(true);
 
@@ -58,6 +76,7 @@ export default function ContactForm() {
       console.log("err");
     }
 
+    form.reset();
     setSubmitting(false);
     return;
   }
@@ -65,6 +84,7 @@ export default function ContactForm() {
   return (
     <Form {...form}>
       <form
+        id="form"
         encType="multipart/form-data"
         onSubmit={form.handleSubmit(onSubmit)}
         className="space-y-8 w-full"
@@ -80,7 +100,7 @@ export default function ContactForm() {
         />
         <CustomField
           control={form.control}
-    formDescription={"Email na který přijde odpověď."}
+          formDescription={"Email na který přijde odpověď."}
           name="email"
           formLabel={"Email*"}
           render={({ field }) => (
@@ -102,6 +122,12 @@ export default function ContactForm() {
         >
           Poslat zprávu
         </Button>
+        <HCaptcha
+          sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+          reCaptchaCompat={false}
+          languageOverride="cs"
+          onVerify={onHCaptchaChange}
+        />
       </form>
     </Form>
   );

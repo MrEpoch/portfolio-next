@@ -3,6 +3,12 @@ import ContactSection from "@/components/sections/Home/ContactSection";
 import FaqSection from "@/components/sections/Home/Faq";
 import React from "react";
 
+export const metadata: Metadata = {
+  title: "Portfolio kontakt",
+  description:
+    "Kontakt na Alexandra Stenčuka, vývojář, freelancer, email a github.",
+};
+
 export default function Page() {
   return (
     <div className="relative w-full min-h-screen py-4">

@@ -3,7 +3,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormDescription
+  FormDescription,
 } from "@/components/ui/form";
 import React from "react";
 import { Control } from "react-hook-form";
@@ -34,7 +34,9 @@ export default function CustomField({
       render={({ field }) => (
         <FormItem className={className}>
           {formLabel && <FormLabel>{formLabel}</FormLabel>}
-          {formDescription && <FormDescription>{formDescription}</FormDescription>}
+          {formDescription && (
+            <FormDescription>{formDescription}</FormDescription>
+          )}
           <FormControl>{render({ field })}</FormControl>
         </FormItem>
       )}

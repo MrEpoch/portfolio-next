@@ -31,9 +31,7 @@ export default function ContactsTable() {
   return (
     <Table>
       <TableHeader>
-        <TableRow
-          className="hover:bg-transparent"
-        >
+        <TableRow className="hover:bg-transparent">
           <TableHead className="">Druh kontaktu</TableHead>
           <TableHead>Text</TableHead>
           <TableHead className="text-right">Akce</TableHead>
@@ -71,7 +69,7 @@ export default function ContactsTable() {
             </Button>
           </TableCell>
         </TableRow>
-        <TableRow className="hover:bg-transparent" >
+        <TableRow className="hover:bg-transparent">
           <TableCell className="font-medium">Github</TableCell>
           <TableCell>MrEpoch</TableCell>
           <TableCell className="text-right">

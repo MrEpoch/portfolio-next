@@ -9,6 +9,7 @@ import {
   Gauge,
   MonitorSmartphone,
 } from "lucide-react";
+import { Metadata } from "next";
 import React from "react";
 
 const services = [
@@ -63,6 +64,10 @@ const services = [
     mainImg: "/assets/undraw-code.svg",
   },
 ];
+
+export const metadata: Metadata = {
+  title: "Portfolio Služby",
+};
 
 export default function Page() {
   return (

@@ -4,6 +4,7 @@ import "./globals.css";
 import { NavDeck } from "@/components/shared/nav-deck";
 import Footer from "@/components/shared/Footer";
 import { Toaster } from "@/components/ui/toaster";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,6 +12,11 @@ export const metadata: Metadata = {
   title: "Portfolio Alexandr Stencuk",
   description:
     "Portfolio Alexandra Stencuk, vývojářské portfolio zaměřené na ukázku projektů, uvedení kontaktů a mého příběhu.",
+  openGraph: {
+    title: "Portfolio Alexandr Stencuk",
+    description:
+      "Portfolio Alexandra Stencuk, vývojářské portfolio zaměřené na ukázku projektů, uvedení kontaktů a mého příběhu.",
+  },
 };
 
 export default function RootLayout({
@@ -30,6 +36,11 @@ export default function RootLayout({
         </main>
         <Toaster />
         <NavDeck />
+        <Script
+          src="https://web3forms.com/client/script.js"
+          async
+          defer
+        ></Script>
       </body>
     </html>
   );
