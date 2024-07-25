@@ -37,6 +37,7 @@ export default function ContactForm() {
   });
 
   const [submitting, setSubmitting] = useState(false);
+  const [isLoadedHCaptcha, setIsLoadedHCaptcha] = useState(false);
 
   const { toast } = useToast();
 
@@ -90,6 +91,12 @@ export default function ContactForm() {
       console.log("err");
     }
 
+    hcaptcha.current?.resetCaptcha();
+    if (dataRes.success) {
+      toast({
+        description: "Vaše zpráva byla odeslána.",
+      });
+    }
     form.reset();
     setSubmitting(false);
     return;
@@ -101,6 +108,7 @@ export default function ContactForm() {
         id="form"
         encType="multipart/form-data"
         onSubmit={hcaptchaVerify}
+        onChange={() => setIsLoadedHCaptcha(true)}
         className="p-4 space-y-8 w-full"
       >
         <CustomField
@@ -137,16 +145,16 @@ export default function ContactForm() {
           Poslat zprávu
         </Button>
         <div className="w-fit h-full items-center justify-center flex">
-          <Suspense fallback={<Loader />}>
+    {isLoadedHCaptcha && (<Suspense fallback={<Loader />}>
             <HCaptcha
               sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
-              reCaptchaCompat={false}
               languageOverride="cs"
               size="invisible"
               ref={hcaptcha}
               onVerify={onHCaptchaChange}
             />
-          </Suspense>
+          </Suspense>)
+    }
         </div>
       </form>
     </Form>

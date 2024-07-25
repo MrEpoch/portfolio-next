@@ -2,6 +2,7 @@ import React from "react";
 import { AnimatedDiv } from "@/components/shared/AnimatedElements";
 import Image from "next/image";
 import Link from "next/link";
+import HeroLandingImage from "./HeroLandingImage";
 
 export default function HeroLanding() {
   return (
@@ -26,17 +27,11 @@ export default function HeroLanding() {
           Projekty
         </Link>
       </AnimatedDiv>
-        <Image
-          src="/assets/shots-projects.webp"
-          alt="Projects picture"
-          priority
-          blurDataURL="/assets/shots-projects.webp"
-          placeholder="blur"
-          loading="eager"
-          width={900}
-          height={900}
-          className="h-full md:max-w-xl rounded w-full"
-        />
+      <div
+        className="w-full flex items-center justify-center h-full relative rounded px-8"
+      >
+        <HeroLandingImage />
+      </div>
     </section>
   );
 }
