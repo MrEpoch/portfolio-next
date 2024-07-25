@@ -3,9 +3,12 @@ import { getPosts } from "@/lib/posts";
 import { Post } from "@/types";
 import React from "react";
 
-export default async function Page({ searchParams }) {
+export default async function Page({
+  searchParams,
+}: {
+  searchParams: { tag: string };
+}) {
   let posts = await getPosts();
-  console.log(searchParams);
   if (searchParams.tag) {
     posts = posts.filter((post: Post) =>
       post.categories.includes(searchParams.tag),

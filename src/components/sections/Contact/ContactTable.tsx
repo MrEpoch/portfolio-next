@@ -58,7 +58,11 @@ export default function ContactsTable() {
           <TableCell className="font-medium">Instagram</TableCell>
           <TableCell>@projekt</TableCell>
           <TableCell className="text-right">
-            <Button asChild variant="secondary">
+            <Button
+              asChild
+              variant="secondary"
+              className="hover:bg-gray-200 transition"
+            >
               <Link
                 href="https://www.instagram.com/alexandrstencuk"
                 className="hover:bg-gray-200 transition"
@@ -72,7 +76,11 @@ export default function ContactsTable() {
           <TableCell className="font-medium">Github</TableCell>
           <TableCell>MrEpoch</TableCell>
           <TableCell className="text-right">
-            <Button asChild variant="secondary">
+            <Button
+              asChild
+              variant="secondary"
+              className="hover:bg-gray-200 transition"
+            >
               <Link
                 href="https://github.com/MrEpoch"
                 className="hover:bg-gray-200 transition"
