@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 
 export default function Footer() {
+
   return (
     <footer className="bg-transparent">
       <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
@@ -42,7 +43,7 @@ export default function Footer() {
             <ul className="mt-8 space-y-4 w-full text-sm">
               <li>
                 <Link
-                  className="relative w-fit max-[400px]:w-full block after:block after:content-[''] after:absolute after:h-[3px] after:bg-blue-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left text-gray-700 transition"
+                  className="relative w-full md:w-fit max-[400px]:w-full text-gray-700 transition footerLinkStyle"
                   href="/projects/lexagos"
                 >
                   Lexagos
@@ -51,7 +52,7 @@ export default function Footer() {
 
               <li>
                 <Link
-                  className="relative w-fit max-[400px]:w-full block after:block after:content-[''] after:absolute after:h-[3px] after:bg-blue-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left text-gray-700 transition"
+                  className="relative w-full md:w-fit max-[400px]:w-full text-gray-700 transition footerLinkStyle"
                   href="/projects/lyfier"
                 >
                   Lyfier
@@ -66,7 +67,7 @@ export default function Footer() {
             <ul className="mt-8 space-y-4 text-sm w-full">
               <li className="group">
                 <Link
-                  className="relative w-fit max-[400px]:w-full block after:block after:content-[''] after:absolute after:h-[3px] after:bg-blue-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left text-gray-700 transition"
+                  className="relative w-full md:w-fit max-[400px]:w-full text-gray-700 transition footerLinkStyle"
                   href="/services#animace"
                 >
                   Webové Animace
@@ -75,7 +76,7 @@ export default function Footer() {
 
               <li>
                 <Link
-                  className="relative w-fit max-[400px]:w-full block after:block after:content-[''] after:absolute after:h-[3px] after:bg-blue-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left text-gray-700 transition"
+                  className="relative w-full md:w-fit max-[400px]:w-full text-gray-700 transition footerLinkStyle"
                   href="/services#design"
                 >
                   {" "}
@@ -85,7 +86,7 @@ export default function Footer() {
 
               <li>
                 <Link
-                  className="relative w-fit max-[400px]:w-full block after:block after:content-[''] after:absolute after:h-[3px] after:bg-blue-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left text-gray-700 transition"
+                  className="relative w-full md:w-fit max-[400px]:w-full text-gray-700 transition footerLinkStyle"
                   href="/services#vývoj"
                 >
                   {" "}
@@ -101,7 +102,7 @@ export default function Footer() {
             <ul className="mt-8 space-y-4 text-sm w-full">
               <li>
                 <Link
-                  className="relative w-fit max-[400px]:w-full block after:block after:content-[''] after:absolute after:h-[3px] after:bg-blue-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left text-gray-700 transition"
+                  className="relative w-full md:w-fit max-[400px]:w-full text-gray-700 transition footerLinkStyle"
                   href="/blog/uvod"
                 >
                   {" "}
@@ -117,7 +118,7 @@ export default function Footer() {
             <ul className="mt-8 space-y-4 text-sm w-full">
               <li>
                 <Link
-                  className="relative w-fit max-[400px]:w-full block after:block after:content-[''] after:absolute after:h-[3px] after:bg-blue-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left text-gray-700 transition"
+                  className="relative w-full md:w-fit max-[400px]:w-full text-gray-700 transition footerLinkStyle"
                   href="/#faq"
                 >
                   {" "}
@@ -127,7 +128,7 @@ export default function Footer() {
 
               <li>
                 <Link
-                  className="relative w-fit max-[400px]:w-full block after:block after:content-[''] after:absolute after:h-[3px] after:bg-blue-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left text-gray-700 transition"
+                  className="relative w-full md:w-fit  text-gray-700 transition footerLinkStyle"
                   href="/contact"
                 >
                   {" "}
