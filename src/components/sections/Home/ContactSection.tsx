@@ -1,6 +1,14 @@
 import { AnimatedDiv } from "@/components/shared/AnimatedElements";
-import ContactForm from "@/components/shared/ContactForm";
 import React from "react";
+
+import dynamic from "next/dynamic";
+
+const DynamicContactForm = dynamic(
+  () => import("@/components/shared/ContactForm"),
+  {
+    ssr: false,
+  },
+);
 
 export default function ContactSection({ isHeading1 = false }) {
   return (
@@ -15,8 +23,8 @@ export default function ContactSection({ isHeading1 = false }) {
             Kontakt
           </h2>
         )}
-        <div className="sm:p-16 p-8 mx-auto max-w-xl w-full bg-white flex items-center font-[sans-serif] shadow-lg rounded-lg">
-          <ContactForm />
+        <div className="sm:p-8 p-4 mx-auto max-w-xl w-full bg-white flex items-center font-[sans-serif] shadow-lg rounded-lg">
+          <DynamicContactForm />
         </div>
       </AnimatedDiv>
     </section>

@@ -7,9 +7,10 @@ import { Form } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import CustomField from "./CustomField";
 import { Textarea } from "@/components/ui/textarea";
-import { useRef, useState } from "react";
+import { Suspense, useRef, useState } from "react";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 import { useToast } from "../ui/use-toast";
+import Loader from "./Loader";
 
 export const formSchema = z.object({
   name: z
@@ -31,6 +32,7 @@ export default function ContactForm() {
       name: "",
       email: "",
       message: "",
+      "h-captcha-response": "",
     },
   });
 
@@ -40,11 +42,23 @@ export default function ContactForm() {
 
   const onHCaptchaChange = (token: string) => {
     form.setValue("h-captcha-response", token);
+    form.handleSubmit(onSubmit)();
   };
+
+  const hcaptcha = useRef<HCaptcha>(null);
+
+  function hcaptchaVerify(e: Event) {
+    e.preventDefault();
+    if (hcaptcha.current == null) {
+      return;
+    }
+
+    hcaptcha.current.execute();
+  }
 
   async function onSubmit(data: z.infer<typeof formSchema>) {
     if (
-      !(data["h-captcha-response"] && data["h-captcha-response"]?.length > 0)
+      !(data["h-captcha-response"] && data["h-captcha-response"].length > 0)
     ) {
       toast({
         description: "Zkontrolujte, prosím, zda jste vyplnili captcha.",
@@ -86,8 +100,8 @@ export default function ContactForm() {
       <form
         id="form"
         encType="multipart/form-data"
-        onSubmit={form.handleSubmit(onSubmit)}
-        className="space-y-8 w-full"
+        onSubmit={hcaptchaVerify}
+        className="p-4 space-y-8 w-full"
       >
         <CustomField
           control={form.control}
@@ -122,12 +136,18 @@ export default function ContactForm() {
         >
           Poslat zprávu
         </Button>
-        <HCaptcha
-          sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
-          reCaptchaCompat={false}
-          languageOverride="cs"
-          onVerify={onHCaptchaChange}
-        />
+        <div className="w-fit h-full items-center justify-center flex">
+          <Suspense fallback={<Loader />}>
+            <HCaptcha
+              sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+              reCaptchaCompat={false}
+              languageOverride="cs"
+              size="invisible"
+              ref={hcaptcha}
+              onVerify={onHCaptchaChange}
+            />
+          </Suspense>
+        </div>
       </form>
     </Form>
   );

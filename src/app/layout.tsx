@@ -4,7 +4,6 @@ import "./globals.css";
 import { NavDeck } from "@/components/shared/nav-deck";
 import Footer from "@/components/shared/Footer";
 import { Toaster } from "@/components/ui/toaster";
-import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -36,11 +35,6 @@ export default function RootLayout({
         </main>
         <Toaster />
         <NavDeck />
-        <Script
-          src="https://web3forms.com/client/script.js"
-          async
-          defer
-        ></Script>
       </body>
     </html>
   );

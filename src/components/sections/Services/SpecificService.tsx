@@ -39,14 +39,18 @@ export default function SpecificService({
 
             <dl className="grid max-[450px]:grid-cols-1 max-[450px]:gap-4 grid-cols-2 gap-4 mt-12 list-none lg:gap-6 text-pretty">
               <div>
-                <data.svg1 />
+                <dt>
+                  <data.svg1 />
+                </dt>
                 <dt className="mt-4 font-medium text-gray-900">
                   {data.dlHeading}
                 </dt>
                 <dd className="mt-2 text-sm text-gray-500">{data.dlText}</dd>
               </div>
               <div>
-                <data.svg2 />
+                <dt>
+                  <data.svg2 />
+                </dt>
                 <dt className="mt-4 font-medium text-gray-900">
                   {data.dlHeading2}
                 </dt>

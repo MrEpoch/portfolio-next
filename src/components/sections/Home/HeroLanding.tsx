@@ -37,8 +37,9 @@ export default function HeroLanding() {
           blurDataURL="/assets/shots-projects.webp"
           placeholder="blur"
           loading="eager"
-          width={1400}
-          height={1400}
+          width={900}
+          height={900}
+          sizes="(max-width: 768px) ,"
           className="h-full md:max-w-xl rounded w-full"
         />
       </AnimatedDiv>
