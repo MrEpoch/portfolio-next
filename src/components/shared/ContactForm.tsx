@@ -138,23 +138,24 @@ export default function ContactForm() {
         />
 
         <Button
-          className="text-white hover:translate-y-1 hover:scale-[1.01] transition"
+          className="text-white hover:translate-y-0.5 hover:scale-[1.01] transition"
           disabled={submitting}
           type="submit"
         >
           Poslat zprávu
         </Button>
         <div className="w-fit h-full items-center justify-center flex">
-    {isLoadedHCaptcha && (<Suspense fallback={<Loader />}>
-            <HCaptcha
-              sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
-              languageOverride="cs"
-              size="invisible"
-              ref={hcaptcha}
-              onVerify={onHCaptchaChange}
-            />
-          </Suspense>)
-    }
+          {isLoadedHCaptcha && (
+            <Suspense fallback={<Loader />}>
+              <HCaptcha
+                sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+                languageOverride="cs"
+                size="invisible"
+                ref={hcaptcha}
+                onVerify={onHCaptchaChange}
+              />
+            </Suspense>
+          )}
         </div>
       </form>
     </Form>

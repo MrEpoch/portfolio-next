@@ -22,14 +22,12 @@ export default function HeroLanding() {
         </p>
         <Link
           href="/projects"
-          className="hover:-translate-y-1 transition inline-flex w-fit justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded bg-primary hover:bg-primary-foreground focus:ring-4 focus:ring-primary dark:focus:ring-primary"
+          className="hover:-translate-y-0.5 transition inline-flex w-fit justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded bg-primary hover:bg-primary-foreground focus:ring-4 focus:ring-primary dark:focus:ring-primary"
         >
           Projekty
         </Link>
       </AnimatedDiv>
-      <div
-        className="w-full flex items-center justify-center h-full relative rounded px-8"
-      >
+      <div className="w-full flex items-center justify-center h-full relative rounded px-8">
         <HeroLandingImage />
       </div>
     </section>
