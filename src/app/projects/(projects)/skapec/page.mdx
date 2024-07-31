@@ -1,0 +1,54 @@
+import Link from "next/link";
+import ProjectInfo from "@/components/shared/ProjectInfo";
+import Image from "next/image";
+import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
+
+export const metadata = {
+  title: "Projekt Skapec",
+  publishDate: "2024-07-31T00:13:30Z",
+  description:
+    "Skapec, obyčejná webová aplikace vytvořena v nextjs, za pomocí s tailwindcss",
+  technologies: ["nextjs", "tailwindcss", "shadcn"],
+  imgSrc: "/assets/project3.webp",
+  projectUrl: "https://construction-skapec.vercel.app/",
+  githubUrl: "https://github.com/MrEpoch/construction-skapec",
+};
+
+# Projekt Skapec
+
+<Image src="/assets/project3.webp" alt="skapec" width={2000} height={2000} />
+
+<ProjectInfo
+  info={{
+    title: "Skapec",
+    description:
+      "Skapec, obyčejná webová aplikace vytvořena v nextjs, za pomocí s tailwindcss",
+    technologies: ["nextjs", "tailwindcss", "shadcn"],
+    publishDate: "2024",
+    imgSrc: "/assets/project3.webp",
+    projectUrl: "https://construction-skapec.vercel.app/",
+    githubUrl: "https://github.com/MrEpoch/construction-skapec",
+  }}
+/>
+
+## Popis projektu
+
+Projekt jsem stavěl v roce 2024, cílem bylo postavit stránku stavební firmy. Stavěl jsem to ve stylu sekcí, web jsem si rozdělil na jednotlivé sekce které jsem používal.
+
+Obsahuje to mnoho sekcí jako CTA (call to action) a faq (často kladené otázky)
+
+Použil jsem žlutou barvu které tam vynikla. Fonty jsem použil nextjs google fonts. Obrázky byli optimalizovány i když jsem použil jenom jeden obrázek. Obsahuje to funkční galerii
+se kterou uživatel může projíždet již postavené.
+
+Obsahuje to mobilní navigaci a nádhernou footer sekci.
+
+Stránka byla v čestině ale mohl bych v budocnu přidat anglickou verzi.
+
+### Obsah webu:
+
+    #### Domovská stránka (home page)
+    #### O nás stránka (about page)
+    #### Kontaktní stránka (contact page)
+    #### Služby stránka (services page)
+    #### Kariéra stránka (careers page)
+    #### Služby stránka > Jednotlivé služby (services page > individual service)
