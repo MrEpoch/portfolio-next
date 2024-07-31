@@ -1,15 +1,14 @@
 import React from "react";
 import { AnimatedDiv } from "@/components/shared/AnimatedElements";
-import Image from "next/image";
 import Link from "next/link";
 import HeroLandingImage from "./HeroLandingImage";
 
 export default function HeroLanding() {
   return (
-    <section className="min-h-screen w-full flex items-center gap-8 md:flex-row flex-col justify-between">
+    <section className="min-h-screen w-full flex items-center gap-16 sm:gap-8 md:flex-row flex-col sm:justify-between">
       <AnimatedDiv
         side="left"
-        className="flex px-8 flex-col md:py-4 py-16 w-full md:items-start items-center justify-center gap-8 h-full"
+        className="flex px-8 flex-col md:pt-4 pt-16 w-full md:items-start items-center justify-center gap-8 h-full"
       >
         <h1 className="text-4xl font-extrabold tracking-tight sm:text-start text-center leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
           Začni{" "}

@@ -142,7 +142,7 @@ export default function Footer() {
           <ul className="flex justify-center gap-6 sm:justify-end">
             <li>
               <Link
-                href="#"
+                href="https://www.instagram.com/alexandrstencuk/"
                 rel="noreferrer"
                 target="_blank"
                 className="text-blue-700 transition hover:text-blue-700/75"

@@ -3,7 +3,6 @@ import React from "react";
 import {
   Table,
   TableBody,
-  TableCaption,
   TableCell,
   TableHead,
   TableHeader,
@@ -12,8 +11,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/components/ui/use-toast";
 import Link from "next/link";
-import Image from "next/image";
-import { Clipboard, Github, Instagram, Twitter, X } from "lucide-react";
+import { Clipboard, Github, Instagram } from "lucide-react";
 
 export default function ContactsTable() {
   const { toast } = useToast();
@@ -40,7 +38,10 @@ export default function ContactsTable() {
       <TableBody>
         <TableRow className="hover:bg-transparent">
           <TableCell className="font-medium">Email</TableCell>
-          <TableCell>stencuk@proton.me</TableCell>
+          <TableCell>
+            stencuk<span className="hidden">bot-protection-text</span>@proton
+            <span className="hidden">bot-protection-text</span>.me
+          </TableCell>
           <TableCell className="text-right">
             <Button
               className="hover:bg-gray-200 transition"
@@ -53,7 +54,7 @@ export default function ContactsTable() {
         </TableRow>
         <TableRow className="hover:bg-transparent">
           <TableCell className="font-medium">Instagram</TableCell>
-          <TableCell>@projekt</TableCell>
+          <TableCell>Alexandr Stenčuk</TableCell>
           <TableCell className="text-right">
             <Button
               asChild
@@ -61,7 +62,7 @@ export default function ContactsTable() {
               className="hover:bg-gray-200 transition"
             >
               <Link
-                href="https://www.instagram.com/alexandrstencuk"
+                href="https://www.instagram.com/alexandrstencuk/"
                 className="hover:bg-gray-200 transition"
               >
                 <Instagram width={24} height={24} />
