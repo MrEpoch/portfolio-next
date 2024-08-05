@@ -1,0 +1,58 @@
+import Link from "next/link";
+import ProjectInfo from "@/components/shared/ProjectInfo";
+import Image from "next/image";
+import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
+
+export const metadata = {
+  title: "Designer portfolio",
+  publishDate: "2024-07-31T00:13:30Z",
+  description:
+    "Designerské portfolio s galerií a výstavou designu v nextjs, za pomocí s tailwindcss",
+  technologies: ["nextjs", "tailwindcss", "shadcn"],
+  imgSrc: "/assets/project4.webp",
+  projectUrl: "https://designer-portfolio-rust.vercel.app/",
+  githubUrl: "https://github.com/MrEpoch/designer-portfolio",
+};
+
+# Projekt Designer portfolio
+
+<Image
+  src="/assets/project4.webp"
+  alt="designer portfolio"
+  width={2000}
+  height={2000}
+/>
+
+<ProjectInfo
+  info={{
+    title: "Designer portfolio",
+    description:
+      "Designerské portfolio s galerií a výstavou designu v nextjs, za pomocí s tailwindcss",
+    technologies: ["nextjs", "tailwindcss", "shadcn"],
+    publishDate: "2024",
+    imgSrc: "/assets/project4.webp",
+    projectUrl: "https://designer-portfolio-rust.vercel.app/",
+    githubUrl: "https://github.com/MrEpoch/designer-portfolio",
+  }}
+/>
+
+## Popis projektu
+
+Postavěno v létě 2024, cíl bylo postavit stylové portfolio vhodné pro využítí designéry nebo umělci.
+
+Obsahuje to moderní fonty, barevné schéma a nádherné animace.
+
+Obsahuje to okna na designové sekci které jsou animované když uživatelé přepíná na prohlížení jiných designů.
+
+Obsahuje to mobilní navigaci a nádhernou footer sekci.
+
+Stránka byla v čestině ale mohl bych v budocnu přidat anglickou verzi.
+
+### Obsah webu:
+
+    #### Domovská stránka (home page)
+    #### O mně stránka (about page)
+    #### Kontaktní stránka (contact page)
+    #### Fotografická stránka (photos page)
+    #### Designová stránka (design page)
+    #### Designová stránka > Jednotlivé designy (design page > individual design)
