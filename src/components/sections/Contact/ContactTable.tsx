@@ -20,8 +20,8 @@ export default function ContactsTable() {
     if (navigator.clipboard) {
       navigator.clipboard.writeText(text);
       toast({
-        title: "Copied",
-        description: text + " copied to clipboard",
+        title: "Zkopírováno",
+        description: text + " zkopírováno do schránky",
       });
     }
   };

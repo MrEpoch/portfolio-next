@@ -11,6 +11,7 @@ import { Suspense, useRef, useState } from "react";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 import { useToast } from "../ui/use-toast";
 import Loader from "./Loader";
+import { SendHorizonal } from "lucide-react";
 
 export const formSchema = z.object({
   name: z
@@ -138,11 +139,16 @@ export default function ContactForm() {
         />
 
         <Button
-          className="text-white hover:translate-y-0.5 hover:scale-[1.01] transition"
+          className="text-white rounded group inline-flex items-center justify-center gap-2 transition gradient-bg"
           disabled={submitting}
           type="submit"
         >
-          Poslat zprávu
+          <span>Poslat zprávu</span>
+          <SendHorizonal
+            className="w-3 h-3 group-hover:translate-x-[2px] transition"
+            height={20}
+            width={20}
+          />
         </Button>
         <div className="w-fit h-full items-center justify-center flex">
           {isLoadedHCaptcha && (

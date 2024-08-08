@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="bg-transparent">
       <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center gap-4 rounded-lg bg-blue-600 p-6 shadow-lg sm:flex-row sm:justify-between">
+        <div className="flex flex-col items-center gap-4 rounded-lg gradient-bg p-6 shadow-lg sm:flex-row sm:justify-between">
           <strong className="text-xl text-white sm:text-xl">
             {" "}
             Nalaďte web podle představ!{" "}

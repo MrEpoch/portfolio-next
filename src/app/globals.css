@@ -64,6 +64,10 @@
     }
   }
 
+  .gradient-bg {
+    @apply bg-gradient-to-r from-primary to-blue-600;
+  }
+
   .blog h1 {
     @apply text-3xl sm:text-4xl font-bold mt-8 mb-4 text-gray-800;
   }

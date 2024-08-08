@@ -55,7 +55,7 @@ export default function FaqSection({ data = initialData }) {
           </p>
           <Link
             href={"/contact"}
-            className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded bg-primary hover:-translate-y-0.5 hover:bg-primary-foreground transition focus:ring-4 focus:ring-blue-300 w-fit dark:focus:ring-blue-900"
+            className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded gradient-bg hover:bg-primary-foreground transition focus:ring-4 focus:ring-blue-300 w-fit dark:focus:ring-blue-900"
           >
             {data.contactText}
           </Link>

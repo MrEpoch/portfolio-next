@@ -33,10 +33,14 @@ export default function ProductSection({ projects }: { projects: Project[] }) {
       >
         <Link
           href="/projects"
-          className="shadow-lg gap-1 group transition inline-flex w-fit justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded bg-primary hover:bg-primary-foreground focus:ring-4 focus:ring-primary dark:focus:ring-primary"
+          className="shadow-lg gap-1 group transition inline-flex w-fit justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded gradient-bg hover:bg-primary-foreground focus:ring-4 focus:ring-primary dark:focus:ring-primary"
         >
           <span>Více projektů</span>
-          <ChevronRight className="group-hover:translate-x-0.5 transition" />
+          <ChevronRight
+            width={20}
+            height={20}
+            className="w-5 h-5 group-hover:translate-x-[2px] transition"
+          />
         </Link>
       </AnimatedDiv>
     </section>
