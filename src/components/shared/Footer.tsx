@@ -192,44 +192,19 @@ export default function Footer() {
 
               <span className="ml-3 text-xl font-bold"></span>
             </div>
-
-            <p className="mt-4 text-center text-sm text-gray-500 sm:mt-0 sm:text-right">
-              Copyright &copy; 2024 Alexandr Stenčuk. All rights reserved.
-            </p>
+            <div className="flex lg:flex-row flex-col items-center gap-2 lg:gap-8">
+              <Link
+                href="/privacy-policy"
+                className="mt-4 text-center text-sm text-gray-500 sm:mt-0 sm:text-right hover:underline"
+              >
+                Zásady ochrany osobních údajů
+              </Link>
+              <p className="mt-4 text-center text-sm text-gray-500 sm:mt-0 sm:text-right">
+                Copyright &copy; 2024 Alexandr Stenčuk. Všechna práva vyhrazena.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-    </footer>
-  );
-}
-
-export function Foote() {
-  return (
-    <footer className="shadow absolute bottom-0 right-0 w-full">
-      <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
-        <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-          © 2024
-          <Link href="/" className="hover:underline">
-            {" "}
-            Alexandr Stenčuk{" "}
-          </Link>
-          . All Rights Reserved.
-        </span>
-        <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
-          <li>
-            <Link
-              href="https://www.privacypolicies.com/live/2470fb14-022a-4f19-a2e0-2893fa1693fd"
-              className="mr-4 hover:underline md:mr-6"
-            >
-              Privacy Policy
-            </Link>
-          </li>
-          <li>
-            <Link href="/contact" className="hover:underline">
-              Kontakt
-            </Link>
-          </li>
-        </ul>
       </div>
     </footer>
   );

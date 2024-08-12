@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss";
-import colors from "tailwindcss/colors";
 
 const config = {
   darkMode: ["class"],
@@ -10,6 +9,13 @@ const config = {
     "bg-primary-foreground",
     "bg-primary",
     "text-primary",
+    "opacity-0",
+    "opacity-100",
+    "translate-x-6",
+    "-translate-x-6",
+    "translate-y-6",
+    "-translate-y-6",
+    "transform-none",
   ],
 
   content: [

@@ -7,23 +7,24 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 });
 
 const nextConfig = {
+  poweredByHeader: false,
   pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
   typescript: {
     ignoreBuildErrors: true,
   },
+  crossOrigin: "anonymous",
   async headers() {
     return [
       {
         source: "/(.*)",
         headers: [
           {
-            key: "Content-Security-Policy",
-            value:
-              "default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' web3forms.com js.hcaptcha.com 'unsafe-inline' 'unsafe-eval'; connect-src 'self' api.web3forms.com newassets.hcaptcha.com; frame-src 'self' newassets.hcaptcha.com; img-src 'self' www.w3.org",
-          },
-          {
             key: "Strict-Transport-Security",
             value: "max-age=31536000; includeSubDomains; preload;",
+          },
+          {
+            key: "Access-Control-Allow-Origin",
+            value: "https://portfolio.stencukpage.com",
           },
           {
             key: "X-Content-Type-Options",
@@ -33,13 +34,19 @@ const nextConfig = {
             key: "X-Frame-Options",
             value: "DENY",
           },
-          {
+          /* {
             key: "Cross-Origin-Embedder-Policy",
-            value: "require-",
-          },
+            value: "credentialless",
+          }, 
+              It breaks hcaptcha
+          */
           {
             key: "Cross-Origin-Opener-Policy",
-            value: "same-origin",
+            value: "same-origin-allow-popups",
+          },
+          {
+            key: "Cross-Origin-Resource-Policy",
+            value: "cross-origin",
           },
           {
             key: "Referrer-Policy",

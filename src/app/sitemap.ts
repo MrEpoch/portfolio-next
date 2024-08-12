@@ -36,6 +36,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "yearly",
       priority: 0.5,
     },
+    {
+      url: "https://portfolio.stencukpage.com/privacy-policy",
+      lastModified: new Date(),
+      changeFrequency: "never",
+      priority: 0.5,
+    },
     ...projects.map((project: any) => ({
       url: `https://portfolio.stencukpage.com/projects/${project.slug}`,
       lastModified: new Date(),

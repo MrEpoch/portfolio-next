@@ -12,6 +12,8 @@ import HCaptcha from "@hcaptcha/react-hcaptcha";
 import { useToast } from "../ui/use-toast";
 import Loader from "./Loader";
 import { SendHorizonal } from "lucide-react";
+import Link from "next/link";
+import { sendMail } from "@/lib/actions";
 
 export const formSchema = z.object({
   name: z
@@ -71,33 +73,26 @@ export default function ContactForm() {
     form.trigger();
     setSubmitting(true);
 
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify({
-        access_key: process.env.NEXT_PUBLIC_WEB3_FORMS_KEY,
-        name: data.name,
-        email: data.email,
-        message: data.message,
-      }),
+    const response = await sendMail({
+      data,
+      hcaptchaRes: data["h-captcha-response"],
     });
 
-    const dataRes = await response.json();
-    if (dataRes.success) {
-      setSubmitting(false);
-    } else {
-      console.log("err");
-    }
+    console.log(response);
 
-    hcaptcha.current?.resetCaptcha();
-    if (dataRes.success) {
+    if (response.code === 200) {
       toast({
         description: "Vaše zpráva byla odeslána.",
       });
+    } else {
+      setSubmitting(false);
+      toast({
+        description: response.error,
+      });
+      return;
     }
+
+    hcaptcha.current?.resetCaptcha();
     form.reset();
     setSubmitting(false);
     return;
@@ -137,24 +132,31 @@ export default function ContactForm() {
           formLabel={"Zpráva (15-400)*"}
           render={({ field }) => <Textarea value={field.value} {...field} />}
         />
-
-        <Button
-          className="text-white rounded group inline-flex items-center justify-center gap-2 transition gradient-bg"
-          disabled={submitting}
-          type="submit"
-        >
-          <span>Poslat zprávu</span>
-          <SendHorizonal
-            className="w-3 h-3 group-hover:translate-x-[2px] transition"
-            height={20}
-            width={20}
-          />
-        </Button>
+        <div className="w-full flex flex-col gap-4">
+          <Button
+            className="w-fit text-white rounded group inline-flex items-center justify-center gap-2 transition gradient-bg"
+            disabled={submitting}
+            type="submit"
+          >
+            <span>Poslat zprávu</span>
+            <SendHorizonal
+              className="w-3 h-3 group-hover:translate-x-[2px] transition"
+              height={20}
+              width={20}
+            />
+          </Button>
+          <Link
+            className="w-full text-center text-sm hover:underline text-gray-500"
+            href="/privacy-policy"
+          >
+            Zásady ochrany osobních údajů
+          </Link>
+        </div>
         <div className="w-fit h-full items-center justify-center flex">
           {isLoadedHCaptcha && (
             <Suspense fallback={<Loader />}>
               <HCaptcha
-                sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+                sitekey={process.env.NEXT_PUBLIC_HCAPTCHA_SITEKEY ?? ""}
                 languageOverride="cs"
                 size="invisible"
                 ref={hcaptcha}

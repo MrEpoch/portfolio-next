@@ -64,6 +64,14 @@
     }
   }
 
+  .h1 {
+    @apply text-2xl font-extrabold tracking-tight text-center leading-none text-gray-900 md:text-4xl lg:text-5xl dark:text-white;
+  }
+
+  .description-p {
+    @apply text-sm font-normal lg:text-lg;
+  }
+
   .gradient-bg {
     @apply bg-gradient-to-r from-primary to-blue-600;
   }
