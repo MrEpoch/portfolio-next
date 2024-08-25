@@ -26,6 +26,7 @@ export const formSchema = z.object({
     .min(15, { message: "Zpráva musí mít alespoň 15 znaků" })
     .max(400, { message: "Zpráva nesmí překročit 400 znaků" }),
   "h-captcha-response": z.string(),
+  privacyPolicy: z.boolean(),
 });
 
 export default function ContactForm() {
@@ -36,6 +37,7 @@ export default function ContactForm() {
       email: "",
       message: "",
       "h-captcha-response": "",
+      privacyPolicy: false,
     },
   });
 
@@ -61,6 +63,13 @@ export default function ContactForm() {
   }
 
   async function onSubmit(data: z.infer<typeof formSchema>) {
+    if (!data.privacyPolicy) {
+      toast({
+        description: "Musíte souhlasit se zásadami ochrany osobních údajů.",
+      });
+      return;
+    }
+
     if (
       !(data["h-captcha-response"] && data["h-captcha-response"].length > 0)
     ) {
@@ -132,6 +141,27 @@ export default function ContactForm() {
           formLabel={"Zpráva (15-400)*"}
           render={({ field }) => <Textarea value={field.value} {...field} />}
         />
+        <div className="w-full items-center flex gap-4">
+          <CustomField
+            control={form.control}
+            name="privacyPolicy"
+            render={({ field }) => (
+              <Input
+                type="checkbox"
+                checked={field.value}
+                className="w-4 h-4"
+                onChange={(e) => field.onChange(e.target.checked)}
+              />
+            )}
+          />
+          <Link
+            className="w-full text-sm hover:underline text-gray-500"
+            href="/privacy-policy"
+          >
+            Zásady ochrany osobních údajů
+          </Link>
+        </div>
+
         <div className="w-full flex flex-col gap-4">
           <Button
             className="w-fit text-white rounded group inline-flex items-center justify-center gap-2 transition gradient-bg"
@@ -145,12 +175,6 @@ export default function ContactForm() {
               width={20}
             />
           </Button>
-          <Link
-            className="w-full text-center text-sm hover:underline text-gray-500"
-            href="/privacy-policy"
-          >
-            Zásady ochrany osobních údajů
-          </Link>
         </div>
         <div className="w-fit h-full items-center justify-center flex">
           {isLoadedHCaptcha && (

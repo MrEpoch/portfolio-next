@@ -2,6 +2,7 @@ import BlogSection from "@/components/sections/Blog/BlogSection";
 import { getPosts } from "@/lib/posts";
 import { Post } from "@/types";
 import React from "react";
+import { z } from "zod";
 
 export default async function Page({
   searchParams,
@@ -9,9 +10,17 @@ export default async function Page({
   searchParams: { tag: string };
 }) {
   let posts = await getPosts();
+
   if (searchParams.tag) {
+    const tagValidation = z.string().min(1);
+    const tagValidationResult = tagValidation.safeParse(searchParams.tag);
+
+    if (!tagValidationResult.success) {
+      return;
+    }
+
     posts = posts.filter((post: Post) =>
-      post.categories.includes(searchParams.tag),
+      post.categories.includes(tagValidationResult.data),
     );
   }
 

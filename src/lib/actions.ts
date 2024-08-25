@@ -10,6 +10,7 @@ const dataSchemaZod = z.object({
     .string()
     .min(15, { message: "Zpráva musí mít alespoň 15 znaků" })
     .max(400, { message: "Zpráva nesmí překročit 400 znaků" }),
+  privacyPolicy: z.boolean(),
 });
 
 export async function sendMail({
@@ -30,6 +31,10 @@ export async function sendMail({
 
     if (!validatedData.success) {
       return { error: "data-validation-fail", code: 400 };
+    }
+
+    if (!validatedData.data.privacyPolicy) {
+      return { error: "privacy-policy-fail", code: 400 };
     }
 
     const fallBack = "0.0.0.0";
