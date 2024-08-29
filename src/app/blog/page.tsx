@@ -1,6 +1,7 @@
 import BlogSection from "@/components/sections/Blog/BlogSection";
 import { getPosts } from "@/lib/posts";
 import { Post } from "@/types";
+import { redirect } from "next/navigation";
 import React from "react";
 import { z } from "zod";
 
@@ -16,7 +17,7 @@ export default async function Page({
     const tagValidationResult = tagValidation.safeParse(searchParams.tag);
 
     if (!tagValidationResult.success) {
-      return;
+      redirect("/blog");
     }
 
     posts = posts.filter((post: Post) =>
