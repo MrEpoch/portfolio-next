@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description:
     "Portfolio Alexandra Stencuk, vývojářské portfolio zaměřené na ukázku projektů, uvedení kontaktů a mého příběhu.",
   openGraph: {
-    title: "Portfolio Alexandr Stencuk",
+    title: "AS portfolio",
     description:
       "Portfolio Alexandra Stencuk, vývojářské portfolio zaměřené na ukázku projektů, uvedení kontaktů a mého příběhu.",
   },
