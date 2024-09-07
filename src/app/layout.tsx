@@ -8,6 +8,7 @@ import { Toaster } from "@/components/ui/toaster";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://portfolio.stencukpage.com"),
   title: "Alexandr Stenčuk portfolio",
   description:
     "Portfolio Alexandra Stenčuka, vývojářské portfolio zaměřené na ukázku projektů, uvedení kontaktů a mého příběhu.",
