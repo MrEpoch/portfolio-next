@@ -50,7 +50,7 @@ export default function FaqSection({ data = initialData }) {
           <h2 className="text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
             {data.heading}
           </h2>
-          <p className=" text-sm sm:w-3/4 font-normal text-gray-500 lg:text-lg sm:text-md dark:text-gray-400">
+          <p className="text-sm sm:w-3/4 font-normal text-gray-500 lg:text-lg sm:text-md dark:text-gray-400">
             {data.description}
           </p>
           <Link

@@ -17,6 +17,13 @@ export default function ProductSection({ projects }: { projects: Project[] }) {
           Moje projekty
         </h2>
       </AnimatedDiv>
+      <p className="text-sm font-normal text-gray-500 lg:text-lg sm:text-md dark:text-gray-400 text-start self-start">
+        Tohle je moje zbírka projektů které jsem postupně postavil. Při
+        vytváření jednotlivých projektů se soustředím na jiný druh stylu, barev
+        a rozložení. Snažím se o to aby mé webové stránky byli rychlé, animované
+        a jednoduché pro navigaci. Projekty stavím v next.js a CSS dělám s
+        tailwindcss.
+      </p>
       <Separator className="w-full h-1 mx-auto my-8 bg-black border-0 rounded md:my-12 dark:bg-gray-700" />
       <div
         className="relative z-[0]  mx-auto max-w-screen-xl flex flex-col

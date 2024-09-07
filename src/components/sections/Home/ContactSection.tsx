@@ -23,6 +23,12 @@ export default function ContactSection({ isHeading1 = false }) {
             Kontakt
           </h2>
         )}
+        <p className="text-sm font-normal text-gray-500 lg:text-lg sm:text-md dark:text-gray-400 text-center">
+          Chcete vytvořit nové webové stránky? Chcete vytvořit moderní design
+          pro web nebo animace? Neváhej a kontaktuj mě! Mám zkušenosti s vývojem
+          moderních webů spolu s Next.js a tailwindcss, kde vytvářím nádherné
+          animace.
+        </p>
         <div className="sm:p-8 p-4 mx-auto max-w-xl w-full bg-white flex items-center font-[sans-serif] shadow-lg rounded-lg">
           <DynamicContactForm />
         </div>

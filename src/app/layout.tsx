@@ -8,13 +8,13 @@ import { Toaster } from "@/components/ui/toaster";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Portfolio Alexandr Stencuk",
+  title: "Alexandr Stenčuk portfolio",
   description:
-    "Portfolio Alexandra Stencuk, vývojářské portfolio zaměřené na ukázku projektů, uvedení kontaktů a mého příběhu.",
+    "Portfolio Alexandra Stenčuka, vývojářské portfolio zaměřené na ukázku projektů, uvedení kontaktů a mého příběhu.",
   openGraph: {
-    title: "AS portfolio",
+    title: "Alexandr Stenčuk portfolio",
     description:
-      "Portfolio Alexandra Stencuk, vývojářské portfolio zaměřené na ukázku projektů, uvedení kontaktů a mého příběhu.",
+      "Portfolio Alexandra Stenčuka, vývojářské portfolio zaměřené na ukázku projektů, uvedení kontaktů a mého příběhu.",
   },
 };
 

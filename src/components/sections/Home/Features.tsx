@@ -3,21 +3,21 @@ import { HoverEffect } from "@/components/ui/card-hover-effect";
 import React from "react";
 export const projects = [
   {
-    title: "Animace",
+    title: "Animační služba",
     description:
       "Mam zkušenosti s vytvářením profesionálních animací pro webové stránky.",
     imgSrc: "/assets/undraw-animation.svg",
     link: "/services#animace",
   },
   {
-    title: "Design",
+    title: "Designová služba",
     description:
       "Výtvor kvalitních designu ve figmě, od minimalistických až do klasických stylů webových stránek.",
     imgSrc: "/assets/undraw-design.svg",
     link: "/services#design",
   },
   {
-    title: "Vývoj",
+    title: "Vývojová služba",
     description:
       "Většina mých webových projektů jsou psána kódově od čistého html + css až po komplexní NextJS ( + React knihovnu) framework.",
     imgSrc: "/assets/undraw-code.svg",
