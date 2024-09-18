@@ -9,11 +9,11 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://portfolio.stencukpage.com"),
-  title: "Alexandr Stenčuk portfolio",
+  title: "Alexandr Stenčuk | Portfolio",
   description:
     "Portfolio Alexandra Stenčuka, vývojářské portfolio zaměřené na ukázku projektů, uvedení kontaktů a mého příběhu.",
   openGraph: {
-    title: "Alexandr Stenčuk portfolio",
+    title: "Alexandr Stenčuk | Portfolio",
     description:
       "Portfolio Alexandra Stenčuka, vývojářské portfolio zaměřené na ukázku projektů, uvedení kontaktů a mého příběhu.",
   },
