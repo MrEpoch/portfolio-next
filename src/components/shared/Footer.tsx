@@ -40,6 +40,7 @@ export default function Footer() {
             <p className="text-lg font-medium text-gray-900">Projekty</p>
 
             <ul className="mt-8 space-y-4 w-full text-sm">
+    {/*
               <li>
                 <Link
                   className="relative w-full md:w-fit max-[400px]:w-full text-gray-700 transition footerLinkStyle"
@@ -48,7 +49,7 @@ export default function Footer() {
                   Lexagos
                 </Link>
               </li>
-
+      */}
               <li>
                 <Link
                   className="relative w-full md:w-fit max-[400px]:w-full text-gray-700 transition footerLinkStyle"
