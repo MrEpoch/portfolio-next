@@ -28,7 +28,6 @@ export const formSchema = z.object({
   "h-captcha-response": z.string(),
   privacyPolicy: z.boolean(),
 });
-
 export default function ContactForm() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -176,6 +175,11 @@ export default function ContactForm() {
             />
           </Button>
         </div>
+     <div className="text-sm text-gray-500">
+    Tato stránka je chráněna <a className="underline hover:text-primary-foreground" href="https://www.hCaptcha.com">hCaptcha</a> a její <span></span>
+ <a className="underline hover:text-primary-foreground" href="https://www.hcaptcha.com/privacy">Zasady ochrany osobních údajů</a> a <span></span>
+<a className="underline hover:text-primary-foreground" href="https://www.hcaptcha.com/terms">Zasady použití</a> platí také.
+</div>
         <div className="w-fit h-full items-center justify-center flex">
           {isLoadedHCaptcha && (
             <Suspense fallback={<Loader />}>
